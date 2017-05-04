@@ -54,5 +54,11 @@ namespace WindowsFormMebelSeller
 
 
         }
+
+        private void поставщикиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Postavhik post = new Postavhik();
+            post.Show();
+        }
     }
 }
