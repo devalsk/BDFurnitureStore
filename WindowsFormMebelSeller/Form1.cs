@@ -17,6 +17,7 @@ namespace WindowsFormMebelSeller
         
         public Form1()
         {
+            
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             
@@ -71,6 +72,15 @@ namespace WindowsFormMebelSeller
         {
             Tovar tovar = new Tovar();
             tovar.Show();
+        }
+
+        private void категорияТовараToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Category categ = new Category();
+            categ.Show();
+
+
         }
     }
 }

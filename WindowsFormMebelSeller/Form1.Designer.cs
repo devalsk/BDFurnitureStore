@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.clientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,6 +41,7 @@
             this.поставщикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поставкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.товарыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.категорияТовараToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource)).BeginInit();
@@ -74,7 +76,8 @@
             this.сотрудникиToolStripMenuItem,
             this.поставщикиToolStripMenuItem,
             this.поставкиToolStripMenuItem,
-            this.товарыToolStripMenuItem});
+            this.товарыToolStripMenuItem,
+            this.категорияТовараToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(899, 24);
@@ -123,12 +126,20 @@
             this.товарыToolStripMenuItem.Text = "Товары";
             this.товарыToolStripMenuItem.Click += new System.EventHandler(this.товарыToolStripMenuItem_Click);
             // 
+            // категорияТовараToolStripMenuItem
+            // 
+            this.категорияТовараToolStripMenuItem.Name = "категорияТовараToolStripMenuItem";
+            this.категорияТовараToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.категорияТовараToolStripMenuItem.Text = "Категория товара";
+            this.категорияТовараToolStripMenuItem.Click += new System.EventHandler(this.категорияТовараToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 463);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Мебельный Магазин";
@@ -156,6 +167,7 @@
         private System.Windows.Forms.ToolStripMenuItem поставщикиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поставкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem товарыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem категорияТовараToolStripMenuItem;
     }
 }
 
