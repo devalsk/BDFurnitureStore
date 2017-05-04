@@ -60,5 +60,11 @@ namespace WindowsFormMebelSeller
             Postavhik post = new Postavhik();
             post.Show();
         }
+
+        private void поставкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Postavka postav = new Postavka();
+            postav.Show();
+        }
     }
 }

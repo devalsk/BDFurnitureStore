@@ -78,6 +78,12 @@
     <Compile Include="Postavhik.Designer.cs">
       <DependentUpon>Postavhik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Postavka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Postavka.Designer.cs">
+      <DependentUpon>Postavka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sotrudniki.cs">
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Postavhik.resx">
       <DependentUpon>Postavhik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postavka.resx">
+      <DependentUpon>Postavka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

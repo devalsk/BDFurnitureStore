@@ -23,5 +23,10 @@ namespace WindowsFormMebelSeller
             this.postavhikiTableAdapter.Fill(this.mebelBDDataSet.Postavhiki);
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
