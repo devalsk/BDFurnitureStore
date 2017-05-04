@@ -66,5 +66,11 @@ namespace WindowsFormMebelSeller
             Postavka postav = new Postavka();
             postav.Show();
         }
+
+        private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tovar tovar = new Tovar();
+            tovar.Show();
+        }
     }
 }

@@ -92,6 +92,12 @@
     <Compile Include="Sotrudniki.Designer.cs">
       <DependentUpon>Sotrudniki.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tovar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tovar.Designer.cs">
+      <DependentUpon>Tovar.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Clienti.resx">
       <DependentUpon>Clienti.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +124,9 @@
     </Compile>
     <EmbeddedResource Include="Sotrudniki.resx">
       <DependentUpon>Sotrudniki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tovar.resx">
+      <DependentUpon>Tovar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MebelBDDataSet.xsc">
       <DependentUpon>MebelBDDataSet.xsd</DependentUpon>

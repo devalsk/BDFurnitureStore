@@ -39,6 +39,7 @@
             this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поставщикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поставкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.товарыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource)).BeginInit();
@@ -72,7 +73,8 @@
             this.должностиToolStripMenuItem,
             this.сотрудникиToolStripMenuItem,
             this.поставщикиToolStripMenuItem,
-            this.поставкиToolStripMenuItem});
+            this.поставкиToolStripMenuItem,
+            this.товарыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(899, 24);
@@ -114,6 +116,13 @@
             this.поставкиToolStripMenuItem.Text = "Поставки";
             this.поставкиToolStripMenuItem.Click += new System.EventHandler(this.поставкиToolStripMenuItem_Click);
             // 
+            // товарыToolStripMenuItem
+            // 
+            this.товарыToolStripMenuItem.Name = "товарыToolStripMenuItem";
+            this.товарыToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.товарыToolStripMenuItem.Text = "Товары";
+            this.товарыToolStripMenuItem.Click += new System.EventHandler(this.товарыToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +155,7 @@
         private System.Windows.Forms.ToolStripMenuItem сотрудникиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поставщикиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поставкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem товарыToolStripMenuItem;
     }
 }
 
