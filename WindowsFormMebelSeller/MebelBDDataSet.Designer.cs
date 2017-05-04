@@ -2512,9 +2512,21 @@ namespace WindowsFormMebelSeller {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SotrudnikiDataTable : global::System.Data.TypedTableBase<SotrudnikiRow> {
             
-            private global::System.Data.DataColumn columnIdSotrudnik;
-            
             private global::System.Data.DataColumn columnFIO;
+            
+            private global::System.Data.DataColumn columnNameDolzhnosti;
+            
+            private global::System.Data.DataColumn columnExpr1;
+            
+            private global::System.Data.DataColumn columnExpr7;
+            
+            private global::System.Data.DataColumn columnExpr2;
+            
+            private global::System.Data.DataColumn columnExpr3;
+            
+            private global::System.Data.DataColumn columnExpr4;
+            
+            private global::System.Data.DataColumn columnIdSotrudnik;
             
             private global::System.Data.DataColumn columnDolzhnost;
             
@@ -2523,6 +2535,14 @@ namespace WindowsFormMebelSeller {
             private global::System.Data.DataColumn columnTelephone;
             
             private global::System.Data.DataColumn columnEmail;
+            
+            private global::System.Data.DataColumn columnExpr5;
+            
+            private global::System.Data.DataColumn columnExpr6;
+            
+            private global::System.Data.DataColumn columnIdDolzhnosti;
+            
+            private global::System.Data.DataColumn columnExpr8;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2559,17 +2579,65 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IdSotrudnikColumn {
+            public global::System.Data.DataColumn FIOColumn {
                 get {
-                    return this.columnIdSotrudnik;
+                    return this.columnFIO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FIOColumn {
+            public global::System.Data.DataColumn NameDolzhnostiColumn {
                 get {
-                    return this.columnFIO;
+                    return this.columnNameDolzhnosti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr7Column {
+                get {
+                    return this.columnExpr7;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr2Column {
+                get {
+                    return this.columnExpr2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr3Column {
+                get {
+                    return this.columnExpr3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr4Column {
+                get {
+                    return this.columnExpr4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdSotrudnikColumn {
+                get {
+                    return this.columnIdSotrudnik;
                 }
             }
             
@@ -2602,6 +2670,38 @@ namespace WindowsFormMebelSeller {
             public global::System.Data.DataColumn EmailColumn {
                 get {
                     return this.columnEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr5Column {
+                get {
+                    return this.columnExpr5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr6Column {
+                get {
+                    return this.columnExpr6;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdDolzhnostiColumn {
+                get {
+                    return this.columnIdDolzhnosti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Expr8Column {
+                get {
+                    return this.columnExpr8;
                 }
             }
             
@@ -2642,15 +2742,25 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SotrudnikiRow AddSotrudnikiRow(string FIO, int Dolzhnost, string Adress, string Telephone, string Email) {
+            public SotrudnikiRow AddSotrudnikiRow(string FIO, string NameDolzhnosti, string Expr1, string Expr7, string Expr2, string Expr3, string Expr4, int Dolzhnost, string Adress, string Telephone, string Email, int Expr6) {
                 SotrudnikiRow rowSotrudnikiRow = ((SotrudnikiRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         FIO,
+                        NameDolzhnosti,
+                        Expr1,
+                        Expr7,
+                        Expr2,
+                        Expr3,
+                        Expr4,
+                        null,
                         Dolzhnost,
                         Adress,
                         Telephone,
-                        Email};
+                        Email,
+                        null,
+                        Expr6,
+                        null,
+                        null};
                 rowSotrudnikiRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSotrudnikiRow);
                 return rowSotrudnikiRow;
@@ -2658,9 +2768,12 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SotrudnikiRow FindByIdSotrudnik(int IdSotrudnik) {
+            public SotrudnikiRow FindByIdSotrudnikExpr5IdDolzhnostiExpr8(int IdSotrudnik, int Expr5, int IdDolzhnosti, int Expr8) {
                 return ((SotrudnikiRow)(this.Rows.Find(new object[] {
-                            IdSotrudnik})));
+                            IdSotrudnik,
+                            Expr5,
+                            IdDolzhnosti,
+                            Expr8})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2680,21 +2793,43 @@ namespace WindowsFormMebelSeller {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnIdSotrudnik = base.Columns["IdSotrudnik"];
                 this.columnFIO = base.Columns["FIO"];
+                this.columnNameDolzhnosti = base.Columns["NameDolzhnosti"];
+                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnExpr7 = base.Columns["Expr7"];
+                this.columnExpr2 = base.Columns["Expr2"];
+                this.columnExpr3 = base.Columns["Expr3"];
+                this.columnExpr4 = base.Columns["Expr4"];
+                this.columnIdSotrudnik = base.Columns["IdSotrudnik"];
                 this.columnDolzhnost = base.Columns["Dolzhnost"];
                 this.columnAdress = base.Columns["Adress"];
                 this.columnTelephone = base.Columns["Telephone"];
                 this.columnEmail = base.Columns["Email"];
+                this.columnExpr5 = base.Columns["Expr5"];
+                this.columnExpr6 = base.Columns["Expr6"];
+                this.columnIdDolzhnosti = base.Columns["IdDolzhnosti"];
+                this.columnExpr8 = base.Columns["Expr8"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnIdSotrudnik = new global::System.Data.DataColumn("IdSotrudnik", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIdSotrudnik);
                 this.columnFIO = new global::System.Data.DataColumn("FIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFIO);
+                this.columnNameDolzhnosti = new global::System.Data.DataColumn("NameDolzhnosti", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNameDolzhnosti);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnExpr7 = new global::System.Data.DataColumn("Expr7", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr7);
+                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr2);
+                this.columnExpr3 = new global::System.Data.DataColumn("Expr3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr3);
+                this.columnExpr4 = new global::System.Data.DataColumn("Expr4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr4);
+                this.columnIdSotrudnik = new global::System.Data.DataColumn("IdSotrudnik", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdSotrudnik);
                 this.columnDolzhnost = new global::System.Data.DataColumn("Dolzhnost", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDolzhnost);
                 this.columnAdress = new global::System.Data.DataColumn("Adress", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2703,16 +2838,38 @@ namespace WindowsFormMebelSeller {
                 base.Columns.Add(this.columnTelephone);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
+                this.columnExpr5 = new global::System.Data.DataColumn("Expr5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr5);
+                this.columnExpr6 = new global::System.Data.DataColumn("Expr6", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr6);
+                this.columnIdDolzhnosti = new global::System.Data.DataColumn("IdDolzhnosti", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdDolzhnosti);
+                this.columnExpr8 = new global::System.Data.DataColumn("Expr8", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr8);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnIdSotrudnik}, true));
+                                this.columnIdSotrudnik,
+                                this.columnExpr5,
+                                this.columnIdDolzhnosti,
+                                this.columnExpr8}, true));
+                this.columnFIO.AllowDBNull = false;
+                this.columnFIO.MaxLength = 200;
+                this.columnNameDolzhnosti.AllowDBNull = false;
+                this.columnNameDolzhnosti.MaxLength = 150;
+                this.columnExpr1.AllowDBNull = false;
+                this.columnExpr1.MaxLength = 200;
+                this.columnExpr7.AllowDBNull = false;
+                this.columnExpr7.MaxLength = 150;
+                this.columnExpr2.AllowDBNull = false;
+                this.columnExpr2.MaxLength = 200;
+                this.columnExpr3.AllowDBNull = false;
+                this.columnExpr3.MaxLength = 100;
+                this.columnExpr4.AllowDBNull = false;
+                this.columnExpr4.MaxLength = 150;
                 this.columnIdSotrudnik.AutoIncrement = true;
                 this.columnIdSotrudnik.AutoIncrementSeed = -1;
                 this.columnIdSotrudnik.AutoIncrementStep = -1;
                 this.columnIdSotrudnik.AllowDBNull = false;
                 this.columnIdSotrudnik.ReadOnly = true;
-                this.columnIdSotrudnik.Unique = true;
-                this.columnFIO.AllowDBNull = false;
-                this.columnFIO.MaxLength = 200;
                 this.columnDolzhnost.AllowDBNull = false;
                 this.columnAdress.AllowDBNull = false;
                 this.columnAdress.MaxLength = 200;
@@ -2720,6 +2877,22 @@ namespace WindowsFormMebelSeller {
                 this.columnTelephone.MaxLength = 100;
                 this.columnEmail.AllowDBNull = false;
                 this.columnEmail.MaxLength = 150;
+                this.columnExpr5.AutoIncrement = true;
+                this.columnExpr5.AutoIncrementSeed = -1;
+                this.columnExpr5.AutoIncrementStep = -1;
+                this.columnExpr5.AllowDBNull = false;
+                this.columnExpr5.ReadOnly = true;
+                this.columnExpr6.AllowDBNull = false;
+                this.columnIdDolzhnosti.AutoIncrement = true;
+                this.columnIdDolzhnosti.AutoIncrementSeed = -1;
+                this.columnIdDolzhnosti.AutoIncrementStep = -1;
+                this.columnIdDolzhnosti.AllowDBNull = false;
+                this.columnIdDolzhnosti.ReadOnly = true;
+                this.columnExpr8.AutoIncrement = true;
+                this.columnExpr8.AutoIncrementSeed = -1;
+                this.columnExpr8.AutoIncrementStep = -1;
+                this.columnExpr8.AllowDBNull = false;
+                this.columnExpr8.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4484,23 +4657,89 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int IdSotrudnik {
-                get {
-                    return ((int)(this[this.tableSotrudniki.IdSotrudnikColumn]));
-                }
-                set {
-                    this[this.tableSotrudniki.IdSotrudnikColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string FIO {
                 get {
                     return ((string)(this[this.tableSotrudniki.FIOColumn]));
                 }
                 set {
                     this[this.tableSotrudniki.FIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NameDolzhnosti {
+                get {
+                    return ((string)(this[this.tableSotrudniki.NameDolzhnostiColumn]));
+                }
+                set {
+                    this[this.tableSotrudniki.NameDolzhnostiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Expr1 {
+                get {
+                    return ((string)(this[this.tableSotrudniki.Expr1Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Expr7 {
+                get {
+                    return ((string)(this[this.tableSotrudniki.Expr7Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr7Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Expr2 {
+                get {
+                    return ((string)(this[this.tableSotrudniki.Expr2Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Expr3 {
+                get {
+                    return ((string)(this[this.tableSotrudniki.Expr3Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Expr4 {
+                get {
+                    return ((string)(this[this.tableSotrudniki.Expr4Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int IdSotrudnik {
+                get {
+                    return ((int)(this[this.tableSotrudniki.IdSotrudnikColumn]));
+                }
+                set {
+                    this[this.tableSotrudniki.IdSotrudnikColumn] = value;
                 }
             }
             
@@ -4545,6 +4784,50 @@ namespace WindowsFormMebelSeller {
                 }
                 set {
                     this[this.tableSotrudniki.EmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr5 {
+                get {
+                    return ((int)(this[this.tableSotrudniki.Expr5Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr6 {
+                get {
+                    return ((int)(this[this.tableSotrudniki.Expr6Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int IdDolzhnosti {
+                get {
+                    return ((int)(this[this.tableSotrudniki.IdDolzhnostiColumn]));
+                }
+                set {
+                    this[this.tableSotrudniki.IdDolzhnostiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Expr8 {
+                get {
+                    return ((int)(this[this.tableSotrudniki.Expr8Column]));
+                }
+                set {
+                    this[this.tableSotrudniki.Expr8Column] = value;
                 }
             }
         }
@@ -7398,52 +7681,23 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Sotrudniki";
-            tableMapping.ColumnMappings.Add("IdSotrudnik", "IdSotrudnik");
             tableMapping.ColumnMappings.Add("FIO", "FIO");
+            tableMapping.ColumnMappings.Add("NameDolzhnosti", "NameDolzhnosti");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("Expr7", "Expr7");
+            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
+            tableMapping.ColumnMappings.Add("Expr3", "Expr3");
+            tableMapping.ColumnMappings.Add("Expr4", "Expr4");
+            tableMapping.ColumnMappings.Add("IdSotrudnik", "IdSotrudnik");
             tableMapping.ColumnMappings.Add("Dolzhnost", "Dolzhnost");
             tableMapping.ColumnMappings.Add("Adress", "Adress");
             tableMapping.ColumnMappings.Add("Telephone", "Telephone");
             tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("Expr5", "Expr5");
+            tableMapping.ColumnMappings.Add("Expr6", "Expr6");
+            tableMapping.ColumnMappings.Add("IdDolzhnosti", "IdDolzhnosti");
+            tableMapping.ColumnMappings.Add("Expr8", "Expr8");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [MebelBD].[dbo].[Sotrudniki] WHERE (([IdSotrudnik] = ?) AND ([FIO] = " +
-                "?) AND ([Dolzhnost] = ?) AND ([Adress] = ?) AND ([Telephone] = ?) AND ([Email] =" +
-                " ?))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_IdSotrudnik", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdSotrudnik", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_FIO", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FIO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Dolzhnost", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dolzhnost", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Adress", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Telephone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telephone", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [MebelBD].[dbo].[Sotrudniki] ([FIO], [Dolzhnost], [Adress], [Telephon" +
-                "e], [Email]) VALUES (?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("FIO", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FIO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Dolzhnost", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dolzhnost", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Adress", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Telephone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telephone", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [MebelBD].[dbo].[Sotrudniki] SET [FIO] = ?, [Dolzhnost] = ?, [Adress] = ?," +
-                " [Telephone] = ?, [Email] = ? WHERE (([IdSotrudnik] = ?) AND ([FIO] = ?) AND ([D" +
-                "olzhnost] = ?) AND ([Adress] = ?) AND ([Telephone] = ?) AND ([Email] = ?))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("FIO", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FIO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Dolzhnost", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dolzhnost", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Adress", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Telephone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telephone", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_IdSotrudnik", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdSotrudnik", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_FIO", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FIO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Dolzhnost", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dolzhnost", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Adress", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adress", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Telephone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telephone", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7459,7 +7713,10 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdSotrudnik, FIO, Dolzhnost, Adress, Telephone, Email FROM dbo.Sotrudniki";
+            this._commandCollection[0].CommandText = @"SELECT        Sotrudniki.FIO AS Expr1, Dolzhnosti.NameDolzhnosti AS Expr7, Sotrudniki.Adress AS Expr2, Sotrudniki.Telephone AS Expr3, Sotrudniki.Email AS Expr4, Sotrudniki.*, Sotrudniki.IdSotrudnik AS Expr5, 
+                         Sotrudniki.Dolzhnost AS Expr6, Dolzhnosti.*, Dolzhnosti.IdDolzhnosti AS Expr8
+FROM            Sotrudniki, Dolzhnosti
+WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7485,200 +7742,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
             MebelBDDataSet.SotrudnikiDataTable dataTable = new MebelBDDataSet.SotrudnikiDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MebelBDDataSet.SotrudnikiDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MebelBDDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Sotrudniki");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdSotrudnik, string Original_FIO, int Original_Dolzhnost, string Original_Adress, string Original_Telephone, string Original_Email) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdSotrudnik));
-            if ((Original_FIO == null)) {
-                throw new global::System.ArgumentNullException("Original_FIO");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_FIO));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Dolzhnost));
-            if ((Original_Adress == null)) {
-                throw new global::System.ArgumentNullException("Original_Adress");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Adress));
-            }
-            if ((Original_Telephone == null)) {
-                throw new global::System.ArgumentNullException("Original_Telephone");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Telephone));
-            }
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Email));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string FIO, int Dolzhnost, string Adress, string Telephone, string Email) {
-            if ((FIO == null)) {
-                throw new global::System.ArgumentNullException("FIO");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(FIO));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Dolzhnost));
-            if ((Adress == null)) {
-                throw new global::System.ArgumentNullException("Adress");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Adress));
-            }
-            if ((Telephone == null)) {
-                throw new global::System.ArgumentNullException("Telephone");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Telephone));
-            }
-            if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Email));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FIO, int Dolzhnost, string Adress, string Telephone, string Email, int Original_IdSotrudnik, string Original_FIO, int Original_Dolzhnost, string Original_Adress, string Original_Telephone, string Original_Email) {
-            if ((FIO == null)) {
-                throw new global::System.ArgumentNullException("FIO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(FIO));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Dolzhnost));
-            if ((Adress == null)) {
-                throw new global::System.ArgumentNullException("Adress");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Adress));
-            }
-            if ((Telephone == null)) {
-                throw new global::System.ArgumentNullException("Telephone");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Telephone));
-            }
-            if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Email));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_IdSotrudnik));
-            if ((Original_FIO == null)) {
-                throw new global::System.ArgumentNullException("Original_FIO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_FIO));
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Dolzhnost));
-            if ((Original_Adress == null)) {
-                throw new global::System.ArgumentNullException("Original_Adress");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Adress));
-            }
-            if ((Original_Telephone == null)) {
-                throw new global::System.ArgumentNullException("Original_Telephone");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Telephone));
-            }
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Email));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
         }
     }
     
@@ -8905,8 +8968,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
         
         private ProdazhaTableAdapter _prodazhaTableAdapter;
         
-        private SotrudnikiTableAdapter _sotrudnikiTableAdapter;
-        
         private sysdiagramsTableAdapter _sysdiagramsTableAdapter;
         
         private TovariTableAdapter _tovariTableAdapter;
@@ -9019,20 +9080,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public SotrudnikiTableAdapter SotrudnikiTableAdapter {
-            get {
-                return this._sotrudnikiTableAdapter;
-            }
-            set {
-                this._sotrudnikiTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public sysdiagramsTableAdapter sysdiagramsTableAdapter {
             get {
                 return this._sysdiagramsTableAdapter;
@@ -9127,10 +9174,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                             && (this._prodazhaTableAdapter.Connection != null))) {
                     return this._prodazhaTableAdapter.Connection;
                 }
-                if (((this._sotrudnikiTableAdapter != null) 
-                            && (this._sotrudnikiTableAdapter.Connection != null))) {
-                    return this._sotrudnikiTableAdapter.Connection;
-                }
                 if (((this._sysdiagramsTableAdapter != null) 
                             && (this._sysdiagramsTableAdapter.Connection != null))) {
                     return this._sysdiagramsTableAdapter.Connection;
@@ -9176,9 +9219,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                     count = (count + 1);
                 }
                 if ((this._prodazhaTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._sotrudnikiTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._sysdiagramsTableAdapter != null)) {
@@ -9255,15 +9295,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._prodazhaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._sotrudnikiTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Sotrudniki.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._sotrudnikiTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9361,14 +9392,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._sotrudnikiTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Sotrudniki.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._sotrudnikiTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._sysdiagramsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.sysdiagrams.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -9440,14 +9463,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._sysdiagramsTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._sotrudnikiTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Sotrudniki.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._sotrudnikiTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9568,11 +9583,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._sotrudnikiTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._sotrudnikiTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
-                        "r, должны использовать одинаковую строку подключения.");
-            }
             if (((this._sysdiagramsTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._sysdiagramsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
@@ -9677,15 +9687,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                     if (this._prodazhaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._prodazhaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._prodazhaTableAdapter.Adapter);
-                    }
-                }
-                if ((this._sotrudnikiTableAdapter != null)) {
-                    revertConnections.Add(this._sotrudnikiTableAdapter, this._sotrudnikiTableAdapter.Connection);
-                    this._sotrudnikiTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
-                    this._sotrudnikiTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
-                    if (this._sotrudnikiTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._sotrudnikiTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._sotrudnikiTableAdapter.Adapter);
                     }
                 }
                 if ((this._sysdiagramsTableAdapter != null)) {
@@ -9805,10 +9806,6 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
                 if ((this._prodazhaTableAdapter != null)) {
                     this._prodazhaTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._prodazhaTableAdapter]));
                     this._prodazhaTableAdapter.Transaction = null;
-                }
-                if ((this._sotrudnikiTableAdapter != null)) {
-                    this._sotrudnikiTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._sotrudnikiTableAdapter]));
-                    this._sotrudnikiTableAdapter.Transaction = null;
                 }
                 if ((this._sysdiagramsTableAdapter != null)) {
                     this._sysdiagramsTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._sysdiagramsTableAdapter]));

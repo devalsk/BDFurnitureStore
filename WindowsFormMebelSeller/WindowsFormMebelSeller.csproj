@@ -64,6 +64,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MebelBDDataSet.cs">
+      <DependentUpon>MebelBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MebelBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

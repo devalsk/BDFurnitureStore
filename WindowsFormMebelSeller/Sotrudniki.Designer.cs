@@ -37,17 +37,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.sotrudnikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
             this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dolzhnostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -110,7 +110,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fIODataGridViewTextBoxColumn,
-            this.dolzhnostDataGridViewTextBoxColumn,
+            this.nameDolzhnostiDataGridViewTextBoxColumn,
             this.adressDataGridViewTextBoxColumn,
             this.telephoneDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
@@ -120,15 +120,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(763, 150);
             this.dataGridView1.TabIndex = 7;
             // 
-            // mebelBDDataSet
-            // 
-            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
-            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // sotrudnikiBindingSource
             // 
             this.sotrudnikiBindingSource.DataMember = "Sotrudniki";
             this.sotrudnikiBindingSource.DataSource = this.mebelBDDataSet;
+            // 
+            // mebelBDDataSet
+            // 
+            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
+            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sotrudnikiTableAdapter
             // 
@@ -140,11 +140,11 @@
             this.fIODataGridViewTextBoxColumn.HeaderText = "FIO";
             this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
             // 
-            // dolzhnostDataGridViewTextBoxColumn
+            // nameDolzhnostiDataGridViewTextBoxColumn
             // 
-            this.dolzhnostDataGridViewTextBoxColumn.DataPropertyName = "Dolzhnost";
-            this.dolzhnostDataGridViewTextBoxColumn.HeaderText = "Dolzhnost";
-            this.dolzhnostDataGridViewTextBoxColumn.Name = "dolzhnostDataGridViewTextBoxColumn";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.DataPropertyName = "NameDolzhnosti";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.HeaderText = "NameDolzhnosti";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.Name = "nameDolzhnostiDataGridViewTextBoxColumn";
             // 
             // adressDataGridViewTextBoxColumn
             // 
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 372);
+            this.ClientSize = new System.Drawing.Size(795, 372);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -181,8 +181,8 @@
             this.Text = "Сотрудники";
             this.Load += new System.EventHandler(this.Sotrudniki_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +202,7 @@
         private System.Windows.Forms.BindingSource sotrudnikiBindingSource;
         private MebelBDDataSetTableAdapters.SotrudnikiTableAdapter sotrudnikiTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dolzhnostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDolzhnostiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;

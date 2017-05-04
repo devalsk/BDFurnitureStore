@@ -23,5 +23,18 @@ namespace WindowsFormMebelSeller
             this.sotrudnikiTableAdapter.Fill(this.mebelBDDataSet.Sotrudniki);
 
         }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.sotrudnikiTableAdapter.Fill(this.mebelBDDataSet.Sotrudniki);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
