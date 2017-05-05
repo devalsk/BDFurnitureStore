@@ -56,9 +56,37 @@ namespace WindowsFormMebelSeller
             int ftCon = 0;
 
 
+            string stCategory = dataGridView1.CurrentCell.Value.ToString();
 
 
 
+            OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
+            odConnect.Open();
+
+
+            OdbcCommand odCom = new OdbcCommand("SELECT Kategori.IdKategori, Kategori.NameKategori FROM  Kategori where Kategori.NameKategori ='"+stCategory.Replace("'","")+ "'",odConnect);
+            OdbcDataReader odRead = odCom.ExecuteReader();
+
+
+            string nameCategori = "";
+
+            if (odRead.Read()) {
+
+                ftCon = Convert.ToInt32(odRead["IdKategori"].ToString());
+
+                nameCategori = odRead["NameKategori"].ToString();
+
+
+            }
+            odRead.Dispose();
+            odConnect.Close();
+            kategoriTableAdapter.Delete(ftCon, nameCategori);
+
+            mebelBDDataSet.Clear();
+            kategoriTableAdapter.Fill(mebelBDDataSet.Kategori);
+
+            
+            
 
 
 
