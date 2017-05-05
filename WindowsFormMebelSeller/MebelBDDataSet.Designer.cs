@@ -3359,6 +3359,10 @@ namespace WindowsFormMebelSeller {
             
             private global::System.Data.DataColumn columnKategori;
             
+            private global::System.Data.DataColumn columnIdKategori;
+            
+            private global::System.Data.DataColumn columnNameKategori;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TovariDataTable() {
@@ -3442,6 +3446,22 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdKategoriColumn {
+                get {
+                    return this.columnIdKategori;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NameKategoriColumn {
+                get {
+                    return this.columnNameKategori;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3477,7 +3497,7 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TovariRow AddTovariRow(string NameTovar, decimal Stoimost, int Kolvo, string Opisanie, int Kategori) {
+            public TovariRow AddTovariRow(string NameTovar, decimal Stoimost, int Kolvo, string Opisanie, int Kategori, string NameKategori) {
                 TovariRow rowTovariRow = ((TovariRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3485,7 +3505,9 @@ namespace WindowsFormMebelSeller {
                         Stoimost,
                         Kolvo,
                         Opisanie,
-                        Kategori};
+                        Kategori,
+                        null,
+                        NameKategori};
                 rowTovariRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTovariRow);
                 return rowTovariRow;
@@ -3521,6 +3543,8 @@ namespace WindowsFormMebelSeller {
                 this.columnKolvo = base.Columns["Kolvo"];
                 this.columnOpisanie = base.Columns["Opisanie"];
                 this.columnKategori = base.Columns["Kategori"];
+                this.columnIdKategori = base.Columns["IdKategori"];
+                this.columnNameKategori = base.Columns["NameKategori"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3538,6 +3562,10 @@ namespace WindowsFormMebelSeller {
                 base.Columns.Add(this.columnOpisanie);
                 this.columnKategori = new global::System.Data.DataColumn("Kategori", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKategori);
+                this.columnIdKategori = new global::System.Data.DataColumn("IdKategori", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdKategori);
+                this.columnNameKategori = new global::System.Data.DataColumn("NameKategori", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNameKategori);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdTovar}, true));
                 this.columnIdTovar.AutoIncrement = true;
@@ -3553,6 +3581,13 @@ namespace WindowsFormMebelSeller {
                 this.columnOpisanie.AllowDBNull = false;
                 this.columnOpisanie.MaxLength = 2147483647;
                 this.columnKategori.AllowDBNull = false;
+                this.columnIdKategori.AutoIncrement = true;
+                this.columnIdKategori.AutoIncrementSeed = -1;
+                this.columnIdKategori.AutoIncrementStep = -1;
+                this.columnIdKategori.AllowDBNull = false;
+                this.columnIdKategori.ReadOnly = true;
+                this.columnNameKategori.AllowDBNull = false;
+                this.columnNameKategori.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5013,6 +5048,28 @@ namespace WindowsFormMebelSeller {
                 }
                 set {
                     this[this.tableTovari.KategoriColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int IdKategori {
+                get {
+                    return ((int)(this[this.tableTovari.IdKategoriColumn]));
+                }
+                set {
+                    this[this.tableTovari.IdKategoriColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NameKategori {
+                get {
+                    return ((string)(this[this.tableTovari.NameKategoriColumn]));
+                }
+                set {
+                    this[this.tableTovari.NameKategoriColumn] = value;
                 }
             }
         }
@@ -8240,43 +8297,9 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
             tableMapping.ColumnMappings.Add("Kolvo", "Kolvo");
             tableMapping.ColumnMappings.Add("Opisanie", "Opisanie");
             tableMapping.ColumnMappings.Add("Kategori", "Kategori");
+            tableMapping.ColumnMappings.Add("IdKategori", "IdKategori");
+            tableMapping.ColumnMappings.Add("NameKategori", "NameKategori");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [MebelBD].[dbo].[Tovari] WHERE (([IdTovar] = ?) AND ([NameTovar] = ?)" +
-                " AND ([Stoimost] = ?) AND ([Kolvo] = ?) AND ([Kategori] = ?))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_IdTovar", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdTovar", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_NameTovar", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NameTovar", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Stoimost", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(19)), ((byte)(4)), "Stoimost", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Kategori", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kategori", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [MebelBD].[dbo].[Tovari] ([NameTovar], [Stoimost], [Kolvo], [Opisanie" +
-                "], [Kategori]) VALUES (?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("NameTovar", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NameTovar", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Stoimost", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(19)), ((byte)(4)), "Stoimost", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Opisanie", global::System.Data.Odbc.OdbcType.Text, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Opisanie", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Kategori", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kategori", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [MebelBD].[dbo].[Tovari] SET [NameTovar] = ?, [Stoimost] = ?, [Kolvo] = ?," +
-                " [Opisanie] = ?, [Kategori] = ? WHERE (([IdTovar] = ?) AND ([NameTovar] = ?) AND" +
-                " ([Stoimost] = ?) AND ([Kolvo] = ?) AND ([Kategori] = ?))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("NameTovar", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NameTovar", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Stoimost", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(19)), ((byte)(4)), "Stoimost", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Opisanie", global::System.Data.Odbc.OdbcType.Text, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Opisanie", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Kategori", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kategori", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_IdTovar", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdTovar", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_NameTovar", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NameTovar", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Stoimost", global::System.Data.Odbc.OdbcType.Decimal, 0, global::System.Data.ParameterDirection.Input, ((byte)(19)), ((byte)(4)), "Stoimost", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Kategori", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kategori", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8289,11 +8312,21 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdTovar, NameTovar, Stoimost, Kolvo, Opisanie, Kategori FROM dbo.Tovari";
+            this._commandCollection[0].CommandText = "SELECT        Tovari.IdTovar, Tovari.NameTovar, Tovari.Stoimost, Tovari.Kolvo, To" +
+                "vari.Opisanie, Tovari.Kategori, Kategori.IdKategori, Kategori.NameKategori\r\nFROM" +
+                "            Tovari, Kategori\r\nWHERE        Tovari.Kategori = Kategori.IdKategori" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        Tovari.IdTovar, Tovari.NameTovar, Tovari.Stoimost, Tovari.Kolvo, To" +
+                "vari.Opisanie, Tovari.Kategori, Kategori.IdKategori, Kategori.NameKategori\r\nFROM" +
+                "            Tovari, Kategori\r\nWHERE        Tovari.Kategori = Kategori.IdKategori" +
+                "";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8323,143 +8356,14 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MebelBDDataSet.TovariDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MebelBDDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Tovari");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdTovar, string Original_NameTovar, decimal Original_Stoimost, int Original_Kolvo, int Original_Kategori) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdTovar));
-            if ((Original_NameTovar == null)) {
-                throw new global::System.ArgumentNullException("Original_NameTovar");
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(MebelBDDataSet.TovariDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_NameTovar));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_Stoimost));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Kolvo));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Kategori));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NameTovar, decimal Stoimost, int Kolvo, string Opisanie, int Kategori) {
-            if ((NameTovar == null)) {
-                throw new global::System.ArgumentNullException("NameTovar");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NameTovar));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Stoimost));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Kolvo));
-            if ((Opisanie == null)) {
-                throw new global::System.ArgumentNullException("Opisanie");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Opisanie));
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Kategori));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NameTovar, decimal Stoimost, int Kolvo, string Opisanie, int Kategori, int Original_IdTovar, string Original_NameTovar, decimal Original_Stoimost, int Original_Kolvo, int Original_Kategori) {
-            if ((NameTovar == null)) {
-                throw new global::System.ArgumentNullException("NameTovar");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NameTovar));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Stoimost));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Kolvo));
-            if ((Opisanie == null)) {
-                throw new global::System.ArgumentNullException("Opisanie");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Opisanie));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Kategori));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_IdTovar));
-            if ((Original_NameTovar == null)) {
-                throw new global::System.ArgumentNullException("Original_NameTovar");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_NameTovar));
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_Stoimost));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Kolvo));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Kategori));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     
@@ -8970,8 +8874,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
         
         private sysdiagramsTableAdapter _sysdiagramsTableAdapter;
         
-        private TovariTableAdapter _tovariTableAdapter;
-        
         private trace_xe_action_mapTableAdapter _trace_xe_action_mapTableAdapter;
         
         private trace_xe_event_mapTableAdapter _trace_xe_event_mapTableAdapter;
@@ -9094,20 +8996,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TovariTableAdapter TovariTableAdapter {
-            get {
-                return this._tovariTableAdapter;
-            }
-            set {
-                this._tovariTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public trace_xe_action_mapTableAdapter trace_xe_action_mapTableAdapter {
             get {
                 return this._trace_xe_action_mapTableAdapter;
@@ -9178,10 +9066,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                             && (this._sysdiagramsTableAdapter.Connection != null))) {
                     return this._sysdiagramsTableAdapter.Connection;
                 }
-                if (((this._tovariTableAdapter != null) 
-                            && (this._tovariTableAdapter.Connection != null))) {
-                    return this._tovariTableAdapter.Connection;
-                }
                 if (((this._trace_xe_action_mapTableAdapter != null) 
                             && (this._trace_xe_action_mapTableAdapter.Connection != null))) {
                     return this._trace_xe_action_mapTableAdapter.Connection;
@@ -9222,9 +9106,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                     count = (count + 1);
                 }
                 if ((this._sysdiagramsTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._tovariTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._trace_xe_action_mapTableAdapter != null)) {
@@ -9304,15 +9185,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._sysdiagramsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tovariTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tovari.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tovariTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9400,14 +9272,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tovariTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tovari.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tovariTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._trace_xe_action_mapTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.trace_xe_action_map.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -9447,14 +9311,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._trace_xe_action_mapTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tovariTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tovari.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tovariTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9588,11 +9444,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._tovariTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tovariTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
-                        "r, должны использовать одинаковую строку подключения.");
-            }
             if (((this._trace_xe_action_mapTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._trace_xe_action_mapTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
@@ -9698,15 +9549,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._sysdiagramsTableAdapter.Adapter);
                     }
                 }
-                if ((this._tovariTableAdapter != null)) {
-                    revertConnections.Add(this._tovariTableAdapter, this._tovariTableAdapter.Connection);
-                    this._tovariTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
-                    this._tovariTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
-                    if (this._tovariTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tovariTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tovariTableAdapter.Adapter);
-                    }
-                }
                 if ((this._trace_xe_action_mapTableAdapter != null)) {
                     revertConnections.Add(this._trace_xe_action_mapTableAdapter, this._trace_xe_action_mapTableAdapter.Connection);
                     this._trace_xe_action_mapTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
@@ -9810,10 +9652,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 if ((this._sysdiagramsTableAdapter != null)) {
                     this._sysdiagramsTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._sysdiagramsTableAdapter]));
                     this._sysdiagramsTableAdapter.Transaction = null;
-                }
-                if ((this._tovariTableAdapter != null)) {
-                    this._tovariTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._tovariTableAdapter]));
-                    this._tovariTableAdapter.Transaction = null;
                 }
                 if ((this._trace_xe_action_mapTableAdapter != null)) {
                     this._trace_xe_action_mapTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._trace_xe_action_mapTableAdapter]));

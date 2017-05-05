@@ -23,5 +23,62 @@ namespace WindowsFormMebelSeller
             this.tovariTableAdapter.Fill(this.mebelBDDataSet.Tovari);
 
         }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tovariTableAdapter.FillBy(this.mebelBDDataSet.Tovari);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tovariTableAdapter.FillBy(this.mebelBDDataSet.Tovari);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tovariTableAdapter.Fill(this.mebelBDDataSet.Tovari);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tovariTableAdapter.Fill(this.mebelBDDataSet.Tovari);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
