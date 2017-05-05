@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace WindowsFormMebelSeller
 {
@@ -21,6 +22,45 @@ namespace WindowsFormMebelSeller
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelBDDataSet.Kategori". При необходимости она может быть перемещена или удалена.
             this.kategoriTableAdapter.Fill(this.mebelBDDataSet.Kategori);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+
+            string mTextDolzh = textBox1.Text;
+
+            kategoriTableAdapter.Insert(mTextDolzh.ToUpper());
+
+            mebelBDDataSet.Clear();
+
+            kategoriTableAdapter.Fill(mebelBDDataSet.Kategori);
+
+            textBox1.Text = "";
+
+
+
+
+
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+            int ftCon = 0;
+
+
+
+
+
+
+
 
         }
     }

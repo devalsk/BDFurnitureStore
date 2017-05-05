@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
-            this.kategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kategoriTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.KategoriTableAdapter();
             this.nameKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
+            this.kategoriTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.KategoriTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategoriBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -55,25 +55,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(618, 189);
             this.dataGridView1.TabIndex = 0;
             // 
-            // mebelBDDataSet
+            // nameKategoriDataGridViewTextBoxColumn
             // 
-            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
-            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
+            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "NameKategori";
+            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
             // 
             // kategoriBindingSource
             // 
             this.kategoriBindingSource.DataMember = "Kategori";
             this.kategoriBindingSource.DataSource = this.mebelBDDataSet;
             // 
+            // mebelBDDataSet
+            // 
+            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
+            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // kategoriTableAdapter
             // 
             this.kategoriTableAdapter.ClearBeforeFill = true;
-            // 
-            // nameKategoriDataGridViewTextBoxColumn
-            // 
-            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
-            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "NameKategori";
-            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
             // 
             // textBox1
             // 
@@ -99,6 +99,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -108,6 +109,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Category
             // 
@@ -123,8 +125,8 @@
             this.Text = "Категория Товара";
             this.Load += new System.EventHandler(this.Category_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategoriBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
