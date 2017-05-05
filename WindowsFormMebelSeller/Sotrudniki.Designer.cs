@@ -37,14 +37,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sotrudnikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
-            this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
             this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotrudnikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
+            this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -99,6 +99,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -124,20 +125,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(763, 150);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // sotrudnikiBindingSource
-            // 
-            this.sotrudnikiBindingSource.DataMember = "Sotrudniki";
-            this.sotrudnikiBindingSource.DataSource = this.mebelBDDataSet;
-            // 
-            // mebelBDDataSet
-            // 
-            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
-            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sotrudnikiTableAdapter
-            // 
-            this.sotrudnikiTableAdapter.ClearBeforeFill = true;
             // 
             // fIODataGridViewTextBoxColumn
             // 
@@ -168,6 +155,20 @@
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // sotrudnikiBindingSource
+            // 
+            this.sotrudnikiBindingSource.DataMember = "Sotrudniki";
+            this.sotrudnikiBindingSource.DataSource = this.mebelBDDataSet;
+            // 
+            // mebelBDDataSet
+            // 
+            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
+            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sotrudnikiTableAdapter
+            // 
+            this.sotrudnikiTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
