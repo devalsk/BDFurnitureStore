@@ -96,7 +96,7 @@ namespace WindowsFormMebelSeller
 
 
 
-            string mCombText =  comboBox1.Text;
+            string mCombText = comboBox1.Text;
 
             int IdCombo = 0;
 
@@ -104,27 +104,39 @@ namespace WindowsFormMebelSeller
             odConnect.Open();
 
 
-            OdbcCommand odComand = new OdbcCommand("select Kategori.IdKategori,Kategori.NameKategori from Kategori where Kategori.NameKategori ='" + mCombText.Replace("'","") + "'",odConnect);
+            OdbcCommand odComand = new OdbcCommand("select Kategori.IdKategori,Kategori.NameKategori from Kategori where Kategori.NameKategori ='" + mCombText.Replace("'", "") + "'", odConnect);
             OdbcDataReader odRead = odComand.ExecuteReader();
 
 
-            if (odRead.Read()) {
+            if (odRead.Read())
+            {
 
                 IdCombo = Convert.ToInt32(odRead["IdKategori"].ToString());
-                    
+
 
 
 
             }
 
-            MessageBox.Show(IdCombo.ToString());
-
+           // MessageBox.Show(IdCombo.ToString());
+           // MessageBox.Show("insert into Tovari values('" + mNameTovar + "'," + "'"+ mStoimost + "',"+ "'" + mKolvo + "'," + "'" + mOpisannie +"'," + "'" + IdCombo+ "')");
 
             odRead.Dispose();
-
-
             odConnect.Close();
 
+
+            odConnect.Open();
+
+            OdbcCommand odTableCom = new OdbcCommand("insert into Tovari values('" + mNameTovar + "'," + "'" + mStoimost + "'," + "'" + mKolvo + "'," + "'" + mOpisannie + "'," + "'" + IdCombo + "')", odConnect);
+            OdbcDataReader od = odTableCom.ExecuteReader();
+
+            od.Dispose();
+            odConnect.Close();
+            tovariTableAdapter.Fill(mebelBDDataSet.Tovari);
+
+
+
+            
 
 
 
@@ -139,12 +151,19 @@ namespace WindowsFormMebelSeller
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-         
 
 
 
 
 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string st = "Name";
+            MessageBox.Show("'st'");
         }
     }
 }
