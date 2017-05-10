@@ -118,9 +118,11 @@ namespace WindowsFormMebelSeller
 
             }
 
-           // MessageBox.Show(IdCombo.ToString());
-           // MessageBox.Show("insert into Tovari values('" + mNameTovar + "'," + "'"+ mStoimost + "',"+ "'" + mKolvo + "'," + "'" + mOpisannie +"'," + "'" + IdCombo+ "')");
+            // MessageBox.Show(IdCombo.ToString());
+            // MessageBox.Show("insert into Tovari values('" + mNameTovar + "'," + "'"+ mStoimost + "',"+ "'" + mKolvo + "'," + "'" + mOpisannie +"'," + "'" + IdCombo+ "')");
 
+
+           
             odRead.Dispose();
             odConnect.Close();
 
@@ -130,13 +132,18 @@ namespace WindowsFormMebelSeller
             OdbcCommand odTableCom = new OdbcCommand("insert into Tovari values('" + mNameTovar + "'," + "'" + mStoimost + "'," + "'" + mKolvo + "'," + "'" + mOpisannie + "'," + "'" + IdCombo + "')", odConnect);
             OdbcDataReader od = odTableCom.ExecuteReader();
 
+
             od.Dispose();
             odConnect.Close();
             tovariTableAdapter.Fill(mebelBDDataSet.Tovari);
 
 
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
 
-            
+
 
 
 
@@ -162,8 +169,31 @@ namespace WindowsFormMebelSeller
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string st = "Name";
-            MessageBox.Show("'st'");
+
+            string tovarName = dataGridView1.CurrentCell.Value.ToString();
+
+
+            OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
+            odConnect.Open();
+            OdbcCommand odCommand = new OdbcCommand("delete from Tovari where Tovari.NameTovar = '" + tovarName + "'",odConnect);
+            OdbcDataReader odRead = odCommand.ExecuteReader();
+
+            odConnect.Close();
+            odRead.Dispose();
+            tovariTableAdapter.Fill(mebelBDDataSet.Tovari);
+
+
+
+
+
+
+
+
+
+
+
+
+         
         }
     }
 }
