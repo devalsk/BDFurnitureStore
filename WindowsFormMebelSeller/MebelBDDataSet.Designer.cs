@@ -1830,6 +1830,12 @@ namespace WindowsFormMebelSeller {
             
             private global::System.Data.DataColumn columnKolvo;
             
+            private global::System.Data.DataColumn columnIdTovar;
+            
+            private global::System.Data.DataColumn columnNameTovar;
+            
+            private global::System.Data.DataColumn columnNamePostavhik;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PostavkaDataTable() {
@@ -1905,6 +1911,30 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdTovarColumn {
+                get {
+                    return this.columnIdTovar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NameTovarColumn {
+                get {
+                    return this.columnNameTovar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NamePostavhikColumn {
+                get {
+                    return this.columnNamePostavhik;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1940,14 +1970,17 @@ namespace WindowsFormMebelSeller {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PostavkaRow AddPostavkaRow(string DatePostavka, int Tovar, int Postavhik, int Kolvo) {
+            public PostavkaRow AddPostavkaRow(string DatePostavka, int Tovar, int Postavhik, int Kolvo, string NameTovar, string NamePostavhik) {
                 PostavkaRow rowPostavkaRow = ((PostavkaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         DatePostavka,
                         Tovar,
                         Postavhik,
-                        Kolvo};
+                        Kolvo,
+                        null,
+                        NameTovar,
+                        NamePostavhik};
                 rowPostavkaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPostavkaRow);
                 return rowPostavkaRow;
@@ -1982,6 +2015,9 @@ namespace WindowsFormMebelSeller {
                 this.columnTovar = base.Columns["Tovar"];
                 this.columnPostavhik = base.Columns["Postavhik"];
                 this.columnKolvo = base.Columns["Kolvo"];
+                this.columnIdTovar = base.Columns["IdTovar"];
+                this.columnNameTovar = base.Columns["NameTovar"];
+                this.columnNamePostavhik = base.Columns["NamePostavhik"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1997,6 +2033,12 @@ namespace WindowsFormMebelSeller {
                 base.Columns.Add(this.columnPostavhik);
                 this.columnKolvo = new global::System.Data.DataColumn("Kolvo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKolvo);
+                this.columnIdTovar = new global::System.Data.DataColumn("IdTovar", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdTovar);
+                this.columnNameTovar = new global::System.Data.DataColumn("NameTovar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNameTovar);
+                this.columnNamePostavhik = new global::System.Data.DataColumn("NamePostavhik", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNamePostavhik);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdPostavka}, true));
                 this.columnIdPostavka.AutoIncrement = true;
@@ -2010,6 +2052,15 @@ namespace WindowsFormMebelSeller {
                 this.columnTovar.AllowDBNull = false;
                 this.columnPostavhik.AllowDBNull = false;
                 this.columnKolvo.AllowDBNull = false;
+                this.columnIdTovar.AutoIncrement = true;
+                this.columnIdTovar.AutoIncrementSeed = -1;
+                this.columnIdTovar.AutoIncrementStep = -1;
+                this.columnIdTovar.AllowDBNull = false;
+                this.columnIdTovar.ReadOnly = true;
+                this.columnNameTovar.AllowDBNull = false;
+                this.columnNameTovar.MaxLength = 200;
+                this.columnNamePostavhik.AllowDBNull = false;
+                this.columnNamePostavhik.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4571,6 +4622,39 @@ namespace WindowsFormMebelSeller {
                     this[this.tablePostavka.KolvoColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int IdTovar {
+                get {
+                    return ((int)(this[this.tablePostavka.IdTovarColumn]));
+                }
+                set {
+                    this[this.tablePostavka.IdTovarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NameTovar {
+                get {
+                    return ((string)(this[this.tablePostavka.NameTovarColumn]));
+                }
+                set {
+                    this[this.tablePostavka.NameTovarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NamePostavhik {
+                get {
+                    return ((string)(this[this.tablePostavka.NamePostavhikColumn]));
+                }
+                set {
+                    this[this.tablePostavka.NamePostavhikColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -7026,41 +7110,10 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Tovar", "Tovar");
             tableMapping.ColumnMappings.Add("Postavhik", "Postavhik");
             tableMapping.ColumnMappings.Add("Kolvo", "Kolvo");
+            tableMapping.ColumnMappings.Add("IdTovar", "IdTovar");
+            tableMapping.ColumnMappings.Add("NameTovar", "NameTovar");
+            tableMapping.ColumnMappings.Add("NamePostavhik", "NamePostavhik");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [MebelBD].[dbo].[Postavka] WHERE (([IdPostavka] = ?) AND ([DatePostav" +
-                "ka] = ?) AND ([Tovar] = ?) AND ([Postavhik] = ?) AND ([Kolvo] = ?))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_IdPostavka", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPostavka", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_DatePostavka", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DatePostavka", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Tovar", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tovar", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Postavhik", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Postavhik", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [MebelBD].[dbo].[Postavka] ([DatePostavka], [Tovar], [Postavhik], [Ko" +
-                "lvo]) VALUES (?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("DatePostavka", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DatePostavka", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Tovar", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tovar", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Postavhik", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Postavhik", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [MebelBD].[dbo].[Postavka] SET [DatePostavka] = ?, [Tovar] = ?, [Postavhik" +
-                "] = ?, [Kolvo] = ? WHERE (([IdPostavka] = ?) AND ([DatePostavka] = ?) AND ([Tova" +
-                "r] = ?) AND ([Postavhik] = ?) AND ([Kolvo] = ?))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("DatePostavka", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DatePostavka", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Tovar", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tovar", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Postavhik", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Postavhik", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_IdPostavka", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPostavka", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_DatePostavka", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DatePostavka", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Tovar", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Tovar", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Postavhik", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Postavhik", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Kolvo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kolvo", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7073,11 +7126,19 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdPostavka, DatePostavka, Tovar, Postavhik, Kolvo FROM dbo.Postavka";
+            this._commandCollection[0].CommandText = @"SELECT        Postavka.IdPostavka, Postavka.DatePostavka, Postavka.Tovar, Postavka.Postavhik, Postavka.Kolvo, Tovari.IdTovar, Tovari.NameTovar, Postavhiki.NamePostavhik
+FROM            Postavka, Tovari, Postavhiki
+WHERE        Postavka.Tovar = Tovari.IdTovar AND Postavka.Postavhik = Postavhiki.IdPostavhik";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Postavka.IdPostavka, Postavka.DatePostavka, Postavka.Tovar, Postavka.Postavhik, Postavka.Kolvo, Tovari.IdTovar, Tovari.NameTovar, Postavhiki.NamePostavhik
+FROM            Postavka, Tovari, Postavhiki
+WHERE        Postavka.Tovar = Tovari.IdTovar AND Postavka.Postavhik = Postavhiki.IdPostavhik";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7107,131 +7168,14 @@ namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MebelBDDataSet.PostavkaDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MebelBDDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Postavka");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdPostavka, string Original_DatePostavka, int Original_Tovar, int Original_Postavhik, int Original_Kolvo) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdPostavka));
-            if ((Original_DatePostavka == null)) {
-                throw new global::System.ArgumentNullException("Original_DatePostavka");
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(MebelBDDataSet.PostavkaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_DatePostavka));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Tovar));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Postavhik));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Kolvo));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string DatePostavka, int Tovar, int Postavhik, int Kolvo) {
-            if ((DatePostavka == null)) {
-                throw new global::System.ArgumentNullException("DatePostavka");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DatePostavka));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Tovar));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Postavhik));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Kolvo));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DatePostavka, int Tovar, int Postavhik, int Kolvo, int Original_IdPostavka, string Original_DatePostavka, int Original_Tovar, int Original_Postavhik, int Original_Kolvo) {
-            if ((DatePostavka == null)) {
-                throw new global::System.ArgumentNullException("DatePostavka");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(DatePostavka));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Tovar));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Postavhik));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Kolvo));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_IdPostavka));
-            if ((Original_DatePostavka == null)) {
-                throw new global::System.ArgumentNullException("Original_DatePostavka");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_DatePostavka));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Tovar));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Postavhik));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Kolvo));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     
@@ -8868,8 +8812,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
         
         private PostavhikiTableAdapter _postavhikiTableAdapter;
         
-        private PostavkaTableAdapter _postavkaTableAdapter;
-        
         private ProdazhaTableAdapter _prodazhaTableAdapter;
         
         private sysdiagramsTableAdapter _sysdiagramsTableAdapter;
@@ -8946,20 +8888,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
             }
             set {
                 this._postavhikiTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public PostavkaTableAdapter PostavkaTableAdapter {
-            get {
-                return this._postavkaTableAdapter;
-            }
-            set {
-                this._postavkaTableAdapter = value;
             }
         }
         
@@ -9054,10 +8982,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                             && (this._postavhikiTableAdapter.Connection != null))) {
                     return this._postavhikiTableAdapter.Connection;
                 }
-                if (((this._postavkaTableAdapter != null) 
-                            && (this._postavkaTableAdapter.Connection != null))) {
-                    return this._postavkaTableAdapter.Connection;
-                }
                 if (((this._prodazhaTableAdapter != null) 
                             && (this._prodazhaTableAdapter.Connection != null))) {
                     return this._prodazhaTableAdapter.Connection;
@@ -9097,9 +9021,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                     count = (count + 1);
                 }
                 if ((this._postavhikiTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._postavkaTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._prodazhaTableAdapter != null)) {
@@ -9158,15 +9079,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._postavhikiTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._postavkaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Postavka.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._postavkaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9248,14 +9160,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._postavkaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Postavka.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._postavkaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._prodazhaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Prodazha.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -9327,14 +9231,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._prodazhaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._postavkaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Postavka.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._postavkaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9429,11 +9325,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._postavkaTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._postavkaTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
-                        "r, должны использовать одинаковую строку подключения.");
-            }
             if (((this._prodazhaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._prodazhaTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
@@ -9520,15 +9411,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                     if (this._postavhikiTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._postavhikiTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._postavhikiTableAdapter.Adapter);
-                    }
-                }
-                if ((this._postavkaTableAdapter != null)) {
-                    revertConnections.Add(this._postavkaTableAdapter, this._postavkaTableAdapter.Connection);
-                    this._postavkaTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
-                    this._postavkaTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
-                    if (this._postavkaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._postavkaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._postavkaTableAdapter.Adapter);
                     }
                 }
                 if ((this._prodazhaTableAdapter != null)) {
@@ -9640,10 +9522,6 @@ WHERE        Dolzhnosti.IdDolzhnosti = Sotrudniki.Dolzhnost";
                 if ((this._postavhikiTableAdapter != null)) {
                     this._postavhikiTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._postavhikiTableAdapter]));
                     this._postavhikiTableAdapter.Transaction = null;
-                }
-                if ((this._postavkaTableAdapter != null)) {
-                    this._postavkaTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._postavkaTableAdapter]));
-                    this._postavkaTableAdapter.Transaction = null;
                 }
                 if ((this._prodazhaTableAdapter != null)) {
                     this._prodazhaTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._prodazhaTableAdapter]));

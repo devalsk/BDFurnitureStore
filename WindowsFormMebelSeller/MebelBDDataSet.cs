@@ -9,6 +9,10 @@
 
 namespace WindowsFormMebelSeller.MebelBDDataSetTableAdapters
 {
+    partial class PostavkaTableAdapter
+    {
+    }
+
     partial class DolzhnostiTableAdapter
     {
     }

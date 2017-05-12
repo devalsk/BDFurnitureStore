@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 
+
 namespace WindowsFormMebelSeller
 {
     public partial class Postavhik : Form
@@ -32,6 +33,9 @@ namespace WindowsFormMebelSeller
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+ 
+
             string mNameCompany = textBox1.Text;
             string mAdres = textBox2.Text;
             int mTelephone = Convert.ToInt32(textBox3.Text);
