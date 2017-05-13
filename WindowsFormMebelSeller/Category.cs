@@ -64,13 +64,14 @@ namespace WindowsFormMebelSeller
             odConnect.Open();
 
 
-            OdbcCommand odCom = new OdbcCommand("SELECT Kategori.IdKategori, Kategori.NameKategori FROM  Kategori where Kategori.NameKategori ='"+stCategory.Replace("'","")+ "'",odConnect);
+            OdbcCommand odCom = new OdbcCommand("SELECT Kategori.IdKategori, Kategori.NameKategori FROM  Kategori where Kategori.NameKategori ='" + stCategory.Replace("'", "") + "'", odConnect);
             OdbcDataReader odRead = odCom.ExecuteReader();
 
 
             string nameCategori = "";
 
-            if (odRead.Read()) {
+            if (odRead.Read())
+            {
 
                 ftCon = Convert.ToInt32(odRead["IdKategori"].ToString());
 
@@ -85,11 +86,30 @@ namespace WindowsFormMebelSeller
             mebelBDDataSet.Clear();
             kategoriTableAdapter.Fill(mebelBDDataSet.Kategori);
 
-            
-            
 
 
 
+
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                dataGridView1.CurrentCell = null;
+                dataGridView1.Rows[i].Visible = false;
+                dataGridView1.Rows[i].Visible = false;
+                for (int c = 0; c < dataGridView1.Columns.Count; c++)
+                {
+                    if (dataGridView1[c, i].Value.ToString() == textBox2.Text)
+                    {
+                        dataGridView1.Rows[i].Visible = true;
+                        break;
+
+                    }
+                }
+            }
         }
     }
 }

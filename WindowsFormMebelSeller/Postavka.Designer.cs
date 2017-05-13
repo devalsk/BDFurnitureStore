@@ -30,9 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datePostavkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamePostavhik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postavkaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tovariBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.mebelBDDataSet1 = new WindowsFormMebelSeller.MebelBDDataSet();
+            this.tovariBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.postavhikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,33 +50,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.postavkaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.postavkaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.postavkaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postavkaTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.PostavkaTableAdapter();
-            this.datePostavkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamePostavhik = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mebelBDDataSet1 = new WindowsFormMebelSeller.MebelBDDataSet();
-            this.tovariBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tovariTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.TovariTableAdapter();
             this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tovariBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.postavhikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postavhikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.PostavhikiTableAdapter();
             this.postavhikiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavhikiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavhikiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +84,41 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(701, 150);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // datePostavkaDataGridViewTextBoxColumn
+            // 
+            this.datePostavkaDataGridViewTextBoxColumn.DataPropertyName = "DatePostavka";
+            this.datePostavkaDataGridViewTextBoxColumn.HeaderText = "DatePostavka";
+            this.datePostavkaDataGridViewTextBoxColumn.Name = "datePostavkaDataGridViewTextBoxColumn";
+            // 
+            // NameTovar
+            // 
+            this.NameTovar.DataPropertyName = "NameTovar";
+            this.NameTovar.HeaderText = "NameTovar";
+            this.NameTovar.Name = "NameTovar";
+            // 
+            // NamePostavhik
+            // 
+            this.NamePostavhik.DataPropertyName = "NamePostavhik";
+            this.NamePostavhik.HeaderText = "NamePostavhik";
+            this.NamePostavhik.Name = "NamePostavhik";
+            // 
+            // kolvoDataGridViewTextBoxColumn
+            // 
+            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
+            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Kolvo";
+            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
+            // 
+            // postavkaBindingSource2
+            // 
+            this.postavkaBindingSource2.DataMember = "Postavka";
+            this.postavkaBindingSource2.DataSource = this.mebelBDDataSet;
+            // 
+            // mebelBDDataSet
+            // 
+            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
+            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox1
             // 
@@ -105,6 +140,21 @@
             this.comboBox1.ValueMember = "IdTovar";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // tovariBindingSource2
+            // 
+            this.tovariBindingSource2.DataMember = "Tovari";
+            this.tovariBindingSource2.DataSource = this.mebelBDDataSet1;
+            // 
+            // mebelBDDataSet1
+            // 
+            this.mebelBDDataSet1.DataSetName = "MebelBDDataSet";
+            this.mebelBDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tovariBindingSource
+            // 
+            this.tovariBindingSource.DataMember = "Tovari";
+            this.tovariBindingSource.DataSource = this.mebelBDDataSet1;
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.postavhikiBindingSource, "NamePostavhik", true));
@@ -116,6 +166,11 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.ValueMember = "IdPostavhik";
+            // 
+            // postavhikiBindingSource
+            // 
+            this.postavhikiBindingSource.DataMember = "Postavhiki";
+            this.postavhikiBindingSource.DataSource = this.mebelBDDataSet1;
             // 
             // textBox2
             // 
@@ -179,16 +234,6 @@
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // postavkaBindingSource2
-            // 
-            this.postavkaBindingSource2.DataMember = "Postavka";
-            this.postavkaBindingSource2.DataSource = this.mebelBDDataSet;
-            // 
-            // mebelBDDataSet
-            // 
-            this.mebelBDDataSet.DataSetName = "MebelBDDataSet";
-            this.mebelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // postavkaBindingSource1
             // 
             this.postavkaBindingSource1.DataMember = "Postavka";
@@ -203,40 +248,6 @@
             // 
             this.postavkaTableAdapter.ClearBeforeFill = true;
             // 
-            // datePostavkaDataGridViewTextBoxColumn
-            // 
-            this.datePostavkaDataGridViewTextBoxColumn.DataPropertyName = "DatePostavka";
-            this.datePostavkaDataGridViewTextBoxColumn.HeaderText = "DatePostavka";
-            this.datePostavkaDataGridViewTextBoxColumn.Name = "datePostavkaDataGridViewTextBoxColumn";
-            // 
-            // NameTovar
-            // 
-            this.NameTovar.DataPropertyName = "NameTovar";
-            this.NameTovar.HeaderText = "NameTovar";
-            this.NameTovar.Name = "NameTovar";
-            // 
-            // NamePostavhik
-            // 
-            this.NamePostavhik.DataPropertyName = "NamePostavhik";
-            this.NamePostavhik.HeaderText = "NamePostavhik";
-            this.NamePostavhik.Name = "NamePostavhik";
-            // 
-            // kolvoDataGridViewTextBoxColumn
-            // 
-            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
-            // 
-            // mebelBDDataSet1
-            // 
-            this.mebelBDDataSet1.DataSetName = "MebelBDDataSet";
-            this.mebelBDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tovariBindingSource
-            // 
-            this.tovariBindingSource.DataMember = "Tovari";
-            this.tovariBindingSource.DataSource = this.mebelBDDataSet1;
-            // 
             // tovariTableAdapter
             // 
             this.tovariTableAdapter.ClearBeforeFill = true;
@@ -245,16 +256,6 @@
             // 
             this.tovariBindingSource1.DataMember = "Tovari";
             this.tovariBindingSource1.DataSource = this.mebelBDDataSet1;
-            // 
-            // tovariBindingSource2
-            // 
-            this.tovariBindingSource2.DataMember = "Tovari";
-            this.tovariBindingSource2.DataSource = this.mebelBDDataSet1;
-            // 
-            // postavhikiBindingSource
-            // 
-            this.postavhikiBindingSource.DataMember = "Postavhiki";
-            this.postavhikiBindingSource.DataSource = this.mebelBDDataSet1;
             // 
             // postavhikiTableAdapter
             // 
@@ -287,13 +288,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavhikiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavhikiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
