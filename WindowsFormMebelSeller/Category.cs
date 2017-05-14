@@ -107,6 +107,10 @@ namespace WindowsFormMebelSeller
                         dataGridView1.Rows[i].Visible = true;
                         break;
 
+                    } else if (textBox2.Text == "") {
+
+                        kategoriTableAdapter.Fill(mebelBDDataSet.Kategori);
+
                     }
                 }
             }
