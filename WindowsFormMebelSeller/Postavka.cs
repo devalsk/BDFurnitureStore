@@ -85,7 +85,7 @@ namespace WindowsFormMebelSeller
         {
 
 
-            string mDateTovar = textBox1.Text;
+            string mDateTovar = DateTime.Now.ToString("yyyy-MM-dd") ;
             string mTovar = comboBox1.Text;
             string mPostavhik = comboBox2.Text;
             string mKolvo = textBox2.Text;
@@ -131,10 +131,12 @@ namespace WindowsFormMebelSeller
             odbRead.Dispose();
             odConnect.Close();
 
-
             odConnect.Open();
-            OdbcCommand odCommand = new OdbcCommand("",odConnect);
-
+            OdbcCommand odCommand = new OdbcCommand("INSERT INTO Postavka VALUES('" + mDateTovar + "','" + idCombo + "','" + idCombo2 + "','" + mKolvo + "')", odConnect);
+            OdbcDataReader dtRead = odCommand.ExecuteReader();
+            dtRead.Dispose();
+            odConnect.Close();
+            postavkaTableAdapter.Fill(mebelBDDataSet.Postavka);
 
 
 
