@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nameTovarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stoimostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisanieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -54,6 +49,11 @@
             this.tovariTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.TovariTableAdapter();
             this.kategoriTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.KategoriTableAdapter();
             this.kategoriBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nameTovarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stoimostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisanieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
@@ -78,36 +78,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(717, 251);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // nameTovarDataGridViewTextBoxColumn
-            // 
-            this.nameTovarDataGridViewTextBoxColumn.DataPropertyName = "NameTovar";
-            this.nameTovarDataGridViewTextBoxColumn.HeaderText = "NameTovar";
-            this.nameTovarDataGridViewTextBoxColumn.Name = "nameTovarDataGridViewTextBoxColumn";
-            // 
-            // nameKategoriDataGridViewTextBoxColumn
-            // 
-            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
-            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "NameKategori";
-            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
-            // 
-            // stoimostDataGridViewTextBoxColumn
-            // 
-            this.stoimostDataGridViewTextBoxColumn.DataPropertyName = "Stoimost";
-            this.stoimostDataGridViewTextBoxColumn.HeaderText = "Stoimost";
-            this.stoimostDataGridViewTextBoxColumn.Name = "stoimostDataGridViewTextBoxColumn";
-            // 
-            // kolvoDataGridViewTextBoxColumn
-            // 
-            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
-            // 
-            // opisanieDataGridViewTextBoxColumn
-            // 
-            this.opisanieDataGridViewTextBoxColumn.DataPropertyName = "Opisanie";
-            this.opisanieDataGridViewTextBoxColumn.HeaderText = "Opisanie";
-            this.opisanieDataGridViewTextBoxColumn.Name = "opisanieDataGridViewTextBoxColumn";
             // 
             // tovariBindingSource1
             // 
@@ -248,6 +218,36 @@
             this.kategoriBindingSource1.DataMember = "Kategori";
             this.kategoriBindingSource1.DataSource = this.mebelBDDataSet;
             // 
+            // nameTovarDataGridViewTextBoxColumn
+            // 
+            this.nameTovarDataGridViewTextBoxColumn.DataPropertyName = "NameTovar";
+            this.nameTovarDataGridViewTextBoxColumn.HeaderText = "Товар";
+            this.nameTovarDataGridViewTextBoxColumn.Name = "nameTovarDataGridViewTextBoxColumn";
+            // 
+            // nameKategoriDataGridViewTextBoxColumn
+            // 
+            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
+            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "Категория";
+            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
+            // 
+            // stoimostDataGridViewTextBoxColumn
+            // 
+            this.stoimostDataGridViewTextBoxColumn.DataPropertyName = "Stoimost";
+            this.stoimostDataGridViewTextBoxColumn.HeaderText = "Стоимость";
+            this.stoimostDataGridViewTextBoxColumn.Name = "stoimostDataGridViewTextBoxColumn";
+            // 
+            // kolvoDataGridViewTextBoxColumn
+            // 
+            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
+            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
+            // 
+            // opisanieDataGridViewTextBoxColumn
+            // 
+            this.opisanieDataGridViewTextBoxColumn.DataPropertyName = "Opisanie";
+            this.opisanieDataGridViewTextBoxColumn.HeaderText = "Описание";
+            this.opisanieDataGridViewTextBoxColumn.Name = "opisanieDataGridViewTextBoxColumn";
+            // 
             // Tovar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,13 +299,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource tovariBindingSource1;
+        private System.Windows.Forms.BindingSource kategoriBindingSource;
+        private MebelBDDataSetTableAdapters.KategoriTableAdapter kategoriTableAdapter;
+        private System.Windows.Forms.BindingSource kategoriBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameTovarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameKategoriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stoimostDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolvoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisanieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource kategoriBindingSource;
-        private MebelBDDataSetTableAdapters.KategoriTableAdapter kategoriTableAdapter;
-        private System.Windows.Forms.BindingSource kategoriBindingSource1;
     }
 }

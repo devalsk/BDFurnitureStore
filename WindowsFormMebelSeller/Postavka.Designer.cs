@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.datePostavkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamePostavhik = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.postavkaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -55,6 +51,10 @@
             this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.postavhikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.PostavhikiTableAdapter();
             this.postavhikiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.datePostavkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamePostavhik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postavkaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
@@ -83,30 +83,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(701, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // datePostavkaDataGridViewTextBoxColumn
-            // 
-            this.datePostavkaDataGridViewTextBoxColumn.DataPropertyName = "DatePostavka";
-            this.datePostavkaDataGridViewTextBoxColumn.HeaderText = "DatePostavka";
-            this.datePostavkaDataGridViewTextBoxColumn.Name = "datePostavkaDataGridViewTextBoxColumn";
-            // 
-            // NameTovar
-            // 
-            this.NameTovar.DataPropertyName = "NameTovar";
-            this.NameTovar.HeaderText = "NameTovar";
-            this.NameTovar.Name = "NameTovar";
-            // 
-            // NamePostavhik
-            // 
-            this.NamePostavhik.DataPropertyName = "NamePostavhik";
-            this.NamePostavhik.HeaderText = "NamePostavhik";
-            this.NamePostavhik.Name = "NamePostavhik";
-            // 
-            // kolvoDataGridViewTextBoxColumn
-            // 
-            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
             // 
             // postavkaBindingSource2
             // 
@@ -215,6 +191,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // postavkaBindingSource1
             // 
@@ -247,6 +224,30 @@
             // 
             this.postavhikiBindingSource1.DataMember = "Postavhiki";
             this.postavhikiBindingSource1.DataSource = this.mebelBDDataSet1;
+            // 
+            // datePostavkaDataGridViewTextBoxColumn
+            // 
+            this.datePostavkaDataGridViewTextBoxColumn.DataPropertyName = "DatePostavka";
+            this.datePostavkaDataGridViewTextBoxColumn.HeaderText = "Дата Поставки";
+            this.datePostavkaDataGridViewTextBoxColumn.Name = "datePostavkaDataGridViewTextBoxColumn";
+            // 
+            // NameTovar
+            // 
+            this.NameTovar.DataPropertyName = "NameTovar";
+            this.NameTovar.HeaderText = "Товар";
+            this.NameTovar.Name = "NameTovar";
+            // 
+            // NamePostavhik
+            // 
+            this.NamePostavhik.DataPropertyName = "NamePostavhik";
+            this.NamePostavhik.HeaderText = "Поставщик";
+            this.NamePostavhik.Name = "NamePostavhik";
+            // 
+            // kolvoDataGridViewTextBoxColumn
+            // 
+            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
+            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
             // 
             // Postavka
             // 
@@ -297,10 +298,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource postavkaBindingSource1;
         private System.Windows.Forms.BindingSource postavkaBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datePostavkaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameTovar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NamePostavhik;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolvoDataGridViewTextBoxColumn;
         private MebelBDDataSet mebelBDDataSet1;
         private System.Windows.Forms.BindingSource tovariBindingSource;
         private MebelBDDataSetTableAdapters.TovariTableAdapter tovariTableAdapter;
@@ -309,5 +306,9 @@
         private System.Windows.Forms.BindingSource postavhikiBindingSource;
         private MebelBDDataSetTableAdapters.PostavhikiTableAdapter postavhikiTableAdapter;
         private System.Windows.Forms.BindingSource postavhikiBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datePostavkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameTovar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamePostavhik;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolvoDataGridViewTextBoxColumn;
     }
 }

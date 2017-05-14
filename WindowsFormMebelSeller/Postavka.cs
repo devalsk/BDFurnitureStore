@@ -85,7 +85,7 @@ namespace WindowsFormMebelSeller
         {
 
 
-            string mDateTovar = DateTime.Now.ToString("yyyy-MM-dd") ;
+            string mDateTovar = DateTime.Now.ToString("yyyy-MM-dd");
             string mTovar = comboBox1.Text;
             string mPostavhik = comboBox2.Text;
             string mKolvo = textBox2.Text;
@@ -118,10 +118,11 @@ namespace WindowsFormMebelSeller
 
             int idCombo2 = 0;
             odConnect.Open();
-            OdbcCommand odCom = new OdbcCommand("select Postavhiki.IdPostavhik,Postavhiki.NamePostavhik from  Postavhiki where Postavhiki.NamePostavhik = '" + mPostavhik.Replace("'","")+ "'",odConnect);
+            OdbcCommand odCom = new OdbcCommand("select Postavhiki.IdPostavhik,Postavhiki.NamePostavhik from  Postavhiki where Postavhiki.NamePostavhik = '" + mPostavhik.Replace("'", "") + "'", odConnect);
             OdbcDataReader odbRead = odCom.ExecuteReader();
 
-            if (odbRead.Read()) {
+            if (odbRead.Read())
+            {
 
 
                 idCombo2 = Convert.ToInt32(odbRead["IdPostavhik"].ToString());
@@ -154,7 +155,41 @@ namespace WindowsFormMebelSeller
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+            string mDataPostavka = dataGridView1.CurrentCell.Value.ToString();
+
+            OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
+            odConnect.Open();
+
+            OdbcCommand odbCommand = new OdbcCommand("Select Postavka.IdPostavka,Postavka.DatePostavka from Postavka where Postavka.DatePostavka = '" + mDataPostavka + "'", odConnect);
+            OdbcDataReader odRead = odbCommand.ExecuteReader();
+
+
+            int idPostavka = 0;
+            if (odRead.Read())
+            {
+
+                idPostavka = Convert.ToInt32(odRead["IdPostavka"].ToString());
+
+
+            }
+            odRead.Dispose();
+            odConnect.Close();
+
+            odConnect.Open();
+            OdbcCommand odCommand = new OdbcCommand("delete from Postavka where Postavka.IdPostavka = '" + idPostavka + "'", odConnect);
+            OdbcDataReader dtRead = odCommand.ExecuteReader();
+            dtRead.Dispose();
+            odConnect.Close();
+
+            postavkaTableAdapter.Fill(mebelBDDataSet.Postavka);
+
         }
     }
 }

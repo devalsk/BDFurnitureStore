@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dolzhnostiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
@@ -39,6 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dolzhnostiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSetBindingSource)).BeginInit();
@@ -57,13 +57,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(781, 206);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // nameDolzhnostiDataGridViewTextBoxColumn
-            // 
-            this.nameDolzhnostiDataGridViewTextBoxColumn.DataPropertyName = "NameDolzhnosti";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.HeaderText = "NameDolzhnosti";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.Name = "nameDolzhnostiDataGridViewTextBoxColumn";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.Width = 500;
             // 
             // dolzhnostiBindingSource
             // 
@@ -121,6 +114,13 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // nameDolzhnostiDataGridViewTextBoxColumn
+            // 
+            this.nameDolzhnostiDataGridViewTextBoxColumn.DataPropertyName = "NameDolzhnosti";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.HeaderText = "Должность";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.Name = "nameDolzhnostiDataGridViewTextBoxColumn";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.Width = 500;
+            // 
             // Dolzhnosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,10 +150,10 @@
         private MebelBDDataSet mebelBDDataSet;
         private System.Windows.Forms.BindingSource dolzhnostiBindingSource;
         private MebelBDDataSetTableAdapters.DolzhnostiTableAdapter dolzhnostiTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDolzhnostiDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDolzhnostiDataGridViewTextBoxColumn;
     }
 }
