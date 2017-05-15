@@ -37,6 +37,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sotrudnikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
@@ -45,14 +50,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dolzhnostiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dolzhnostiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.DolzhnostiTableAdapter();
+            this.dolzhnostiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dolzhnostiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dolzhnostiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -64,11 +69,15 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dolzhnostiBindingSource1, "NameDolzhnosti", true));
+            this.comboBox1.DataSource = this.dolzhnostiBindingSource;
+            this.comboBox1.DisplayMember = "NameDolzhnosti";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(144, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.ValueMember = "NameDolzhnosti";
             // 
             // textBox2
             // 
@@ -109,6 +118,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -125,6 +135,36 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(763, 150);
             this.dataGridView1.TabIndex = 7;
+            // 
+            // fIODataGridViewTextBoxColumn
+            // 
+            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
+            this.fIODataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
+            // 
+            // nameDolzhnostiDataGridViewTextBoxColumn
+            // 
+            this.nameDolzhnostiDataGridViewTextBoxColumn.DataPropertyName = "NameDolzhnosti";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.HeaderText = "Должность";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.Name = "nameDolzhnostiDataGridViewTextBoxColumn";
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            // 
+            // telephoneDataGridViewTextBoxColumn
+            // 
+            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
             // sotrudnikiBindingSource
             // 
@@ -185,35 +225,19 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "E-mail";
             // 
-            // fIODataGridViewTextBoxColumn
+            // dolzhnostiBindingSource
             // 
-            this.fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            this.fIODataGridViewTextBoxColumn.HeaderText = "ФИО";
-            this.fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
+            this.dolzhnostiBindingSource.DataMember = "Dolzhnosti";
+            this.dolzhnostiBindingSource.DataSource = this.mebelBDDataSet;
             // 
-            // nameDolzhnostiDataGridViewTextBoxColumn
+            // dolzhnostiTableAdapter
             // 
-            this.nameDolzhnostiDataGridViewTextBoxColumn.DataPropertyName = "NameDolzhnosti";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.HeaderText = "Должность";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.Name = "nameDolzhnostiDataGridViewTextBoxColumn";
+            this.dolzhnostiTableAdapter.ClearBeforeFill = true;
             // 
-            // adressDataGridViewTextBoxColumn
+            // dolzhnostiBindingSource1
             // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Адрес";
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            // 
-            // telephoneDataGridViewTextBoxColumn
-            // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.dolzhnostiBindingSource1.DataMember = "Dolzhnosti";
+            this.dolzhnostiBindingSource1.DataSource = this.mebelBDDataSet;
             // 
             // Sotrudniki
             // 
@@ -239,6 +263,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dolzhnostiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dolzhnostiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +293,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dolzhnostiBindingSource;
+        private MebelBDDataSetTableAdapters.DolzhnostiTableAdapter dolzhnostiTableAdapter;
+        private System.Windows.Forms.BindingSource dolzhnostiBindingSource1;
     }
 }
