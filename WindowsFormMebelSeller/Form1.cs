@@ -25,6 +25,10 @@ namespace WindowsFormMebelSeller
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelBDDataSet.Sotrudniki". При необходимости она может быть перемещена или удалена.
+            this.sotrudnikiTableAdapter.Fill(this.mebelBDDataSet.Sotrudniki);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelBDDataSet.Tovari". При необходимости она может быть перемещена или удалена.
+            this.tovariTableAdapter.Fill(this.mebelBDDataSet.Tovari);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelBDDataSet.Prodazha". При необходимости она может быть перемещена или удалена.
             this.prodazhaTableAdapter.Fill(this.mebelBDDataSet.Prodazha);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelBDDataSet.Clienti". При необходимости она может быть перемещена или удалена.

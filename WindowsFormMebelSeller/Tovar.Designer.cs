@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameTovarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stoimostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisanieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -49,11 +54,6 @@
             this.tovariTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.TovariTableAdapter();
             this.kategoriTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.KategoriTableAdapter();
             this.kategoriBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nameTovarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stoimostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisanieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
@@ -78,6 +78,36 @@
             this.dataGridView1.Size = new System.Drawing.Size(717, 251);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // nameTovarDataGridViewTextBoxColumn
+            // 
+            this.nameTovarDataGridViewTextBoxColumn.DataPropertyName = "NameTovar";
+            this.nameTovarDataGridViewTextBoxColumn.HeaderText = "Товар";
+            this.nameTovarDataGridViewTextBoxColumn.Name = "nameTovarDataGridViewTextBoxColumn";
+            // 
+            // nameKategoriDataGridViewTextBoxColumn
+            // 
+            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
+            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "Категория";
+            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
+            // 
+            // stoimostDataGridViewTextBoxColumn
+            // 
+            this.stoimostDataGridViewTextBoxColumn.DataPropertyName = "Stoimost";
+            this.stoimostDataGridViewTextBoxColumn.HeaderText = "Стоимость";
+            this.stoimostDataGridViewTextBoxColumn.Name = "stoimostDataGridViewTextBoxColumn";
+            // 
+            // kolvoDataGridViewTextBoxColumn
+            // 
+            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
+            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
+            // 
+            // opisanieDataGridViewTextBoxColumn
+            // 
+            this.opisanieDataGridViewTextBoxColumn.DataPropertyName = "Opisanie";
+            this.opisanieDataGridViewTextBoxColumn.HeaderText = "Описание";
+            this.opisanieDataGridViewTextBoxColumn.Name = "opisanieDataGridViewTextBoxColumn";
             // 
             // tovariBindingSource1
             // 
@@ -217,36 +247,6 @@
             // 
             this.kategoriBindingSource1.DataMember = "Kategori";
             this.kategoriBindingSource1.DataSource = this.mebelBDDataSet;
-            // 
-            // nameTovarDataGridViewTextBoxColumn
-            // 
-            this.nameTovarDataGridViewTextBoxColumn.DataPropertyName = "NameTovar";
-            this.nameTovarDataGridViewTextBoxColumn.HeaderText = "Товар";
-            this.nameTovarDataGridViewTextBoxColumn.Name = "nameTovarDataGridViewTextBoxColumn";
-            // 
-            // nameKategoriDataGridViewTextBoxColumn
-            // 
-            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
-            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "Категория";
-            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
-            // 
-            // stoimostDataGridViewTextBoxColumn
-            // 
-            this.stoimostDataGridViewTextBoxColumn.DataPropertyName = "Stoimost";
-            this.stoimostDataGridViewTextBoxColumn.HeaderText = "Стоимость";
-            this.stoimostDataGridViewTextBoxColumn.Name = "stoimostDataGridViewTextBoxColumn";
-            // 
-            // kolvoDataGridViewTextBoxColumn
-            // 
-            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Количество";
-            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
-            // 
-            // opisanieDataGridViewTextBoxColumn
-            // 
-            this.opisanieDataGridViewTextBoxColumn.DataPropertyName = "Opisanie";
-            this.opisanieDataGridViewTextBoxColumn.HeaderText = "Описание";
-            this.opisanieDataGridViewTextBoxColumn.Name = "opisanieDataGridViewTextBoxColumn";
             // 
             // Tovar
             // 

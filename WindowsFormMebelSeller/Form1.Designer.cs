@@ -43,6 +43,13 @@
             this.товарыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.категорияТовараToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tovarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotrudnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.samovivozDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDostavkiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.symmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodazhaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prodazhaTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.ProdazhaTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -59,19 +66,26 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tovarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotrudnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.samovivozDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDostavkiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.symmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tovariBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tovariTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.TovariTableAdapter();
+            this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sotrudnikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
+            this.sotrudnikiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodazhaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingSource1
@@ -177,130 +191,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(832, 217);
             this.dataGridView1.TabIndex = 1;
             // 
-            // prodazhaBindingSource
-            // 
-            this.prodazhaBindingSource.DataMember = "Prodazha";
-            this.prodazhaBindingSource.DataSource = this.mebelBDDataSet;
-            // 
-            // prodazhaTableAdapter
-            // 
-            this.prodazhaTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(185, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(27, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(27, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(185, 45);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(312, 44);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(325, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(444, 45);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Товар";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Сотрудник";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(312, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Клиент";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(440, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Самовывоз";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Количество";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(185, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Адрес доставки";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(325, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Сумма";
-            // 
             // tovarDataGridViewTextBoxColumn
             // 
             this.tovarDataGridViewTextBoxColumn.DataPropertyName = "Tovar";
@@ -343,6 +233,180 @@
             this.symmaDataGridViewTextBoxColumn.HeaderText = "Сумма";
             this.symmaDataGridViewTextBoxColumn.Name = "symmaDataGridViewTextBoxColumn";
             // 
+            // prodazhaBindingSource
+            // 
+            this.prodazhaBindingSource.DataMember = "Prodazha";
+            this.prodazhaBindingSource.DataSource = this.mebelBDDataSet;
+            // 
+            // prodazhaTableAdapter
+            // 
+            this.prodazhaTableAdapter.ClearBeforeFill = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(185, 89);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(27, 89);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tovariBindingSource1, "NameTovar", true));
+            this.comboBox1.DataSource = this.tovariBindingSource;
+            this.comboBox1.DisplayMember = "NameTovar";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(27, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.ValueMember = "NameTovar";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.sotrudnikiBindingSource1, "FIO", true));
+            this.comboBox2.DataSource = this.sotrudnikiBindingSource;
+            this.comboBox2.DisplayMember = "FIO";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(166, 45);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 5;
+            this.comboBox2.ValueMember = "FIO";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientiBindingSource2, "FIO", true));
+            this.comboBox3.DataSource = this.clientiBindingSource1;
+            this.comboBox3.DisplayMember = "FIO";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(372, 44);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(205, 21);
+            this.comboBox3.TabIndex = 6;
+            this.comboBox3.ValueMember = "FIO";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(325, 89);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 7;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(583, 45);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Товар";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(245, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Сотрудник";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(372, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Клиент";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(579, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Самовывоз";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Количество";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(185, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Адрес доставки";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(325, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Сумма";
+            // 
+            // tovariBindingSource
+            // 
+            this.tovariBindingSource.DataMember = "Tovari";
+            this.tovariBindingSource.DataSource = this.mebelBDDataSet;
+            // 
+            // tovariTableAdapter
+            // 
+            this.tovariTableAdapter.ClearBeforeFill = true;
+            // 
+            // tovariBindingSource1
+            // 
+            this.tovariBindingSource1.DataMember = "Tovari";
+            this.tovariBindingSource1.DataSource = this.mebelBDDataSet;
+            // 
+            // sotrudnikiBindingSource
+            // 
+            this.sotrudnikiBindingSource.DataMember = "Sotrudniki";
+            this.sotrudnikiBindingSource.DataSource = this.mebelBDDataSet;
+            // 
+            // sotrudnikiTableAdapter
+            // 
+            this.sotrudnikiTableAdapter.ClearBeforeFill = true;
+            // 
+            // sotrudnikiBindingSource1
+            // 
+            this.sotrudnikiBindingSource1.DataMember = "Sotrudniki";
+            this.sotrudnikiBindingSource1.DataSource = this.mebelBDDataSet;
+            // 
+            // clientiBindingSource1
+            // 
+            this.clientiBindingSource1.DataMember = "Clienti";
+            this.clientiBindingSource1.DataSource = this.mebelBDDataSet;
+            // 
+            // clientiBindingSource2
+            // 
+            this.clientiBindingSource2.DataMember = "Clienti";
+            this.clientiBindingSource2.DataSource = this.mebelBDDataSet;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +440,12 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodazhaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,6 +489,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kolvoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adressDostavkiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn symmaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tovariBindingSource;
+        private MebelBDDataSetTableAdapters.TovariTableAdapter tovariTableAdapter;
+        private System.Windows.Forms.BindingSource tovariBindingSource1;
+        private System.Windows.Forms.BindingSource sotrudnikiBindingSource;
+        private MebelBDDataSetTableAdapters.SotrudnikiTableAdapter sotrudnikiTableAdapter;
+        private System.Windows.Forms.BindingSource sotrudnikiBindingSource1;
+        private System.Windows.Forms.BindingSource clientiBindingSource2;
+        private System.Windows.Forms.BindingSource clientiBindingSource1;
     }
 }
 
