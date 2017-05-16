@@ -350,11 +350,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(245, 28);
+            this.label2.Location = new System.Drawing.Point(163, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Сотрудник";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 

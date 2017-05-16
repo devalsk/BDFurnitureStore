@@ -100,6 +100,8 @@ namespace WindowsFormMebelSeller
             string mAdresDelivery = textBox1.Text;
             string mSumma = textBox3.Text;
             string mTovar = comboBox1.Text;
+            string mSotrudnikiFio = comboBox2.Text;
+            string mClientiFio = comboBox3.Text;
 
             OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
             odConnect.Open();
@@ -116,10 +118,64 @@ namespace WindowsFormMebelSeller
 
                 idTovar = Convert.ToInt32(odData["IdTovar"].ToString());
                 stoimostTovar = odData["Tovari.Stoimost"].ToString();
+
+
+
             }
+            odData.Dispose();
+            odConnect.Close();
+
+
+            odConnect.Open();
+            OdbcCommand odCommand = new OdbcCommand("select Sotrudniki.FIO,Sotrudniki.IdSotrudnik from Sotrudniki where Sotrudniki.FIO = '"+ mSotrudnikiFio +"'", odConnect);
+            OdbcDataReader odDataRd = odCommand.ExecuteReader();
+
+            int idSotrudnik = 0;
+            if (odDataRd.Read()) {
+
+
+                idSotrudnik = Convert.ToInt32(odDataRd["IdSotrudnik"].ToString());
+
+
+
+            }
+            odDataRd.Dispose();
+            odConnect.Close();
+
+            odConnect.Open();
+            OdbcCommand odbCom = new OdbcCommand("select Clienti.FIO,Clienti.IdClienti from Clienti where Clienti.FIO = '"+  mClientiFio + "'", odConnect);
+            OdbcDataReader odbDataReader = odbCom.ExecuteReader();
+
+            idSotrudnik = 0;
+
+            if (odbDataReader.Read()) {
+
+
+                idSotrudnik = Convert.ToInt32(odbDataReader["IdClienti"].ToString());
+
+            }
+
+            odConnect.Close();
+            odbDataReader.Dispose();
+
+
+            odConnect.Open();
+            OdbcCommand odbMain = new OdbcCommand("",odConnect);
+
+
             
 
 
+
+
+
+
+
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
