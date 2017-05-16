@@ -116,6 +116,7 @@ namespace WindowsFormMebelSeller
             odRead.Dispose();
             odConnect.Close();
 
+            
             int idCombo2 = 0;
             odConnect.Open();
             OdbcCommand odCom = new OdbcCommand("select Postavhiki.IdPostavhik,Postavhiki.NamePostavhik from  Postavhiki where Postavhiki.NamePostavhik = '" + mPostavhik.Replace("'", "") + "'", odConnect);

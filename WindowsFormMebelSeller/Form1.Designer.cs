@@ -55,8 +55,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tovariBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.sotrudnikiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sotrudnikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.clientiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,26 +72,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tovariBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tovariTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.TovariTableAdapter();
-            this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sotrudnikiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
-            this.sotrudnikiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clientiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clientiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodazhaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingSource1
@@ -268,6 +270,16 @@
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "NameTovar";
             // 
+            // tovariBindingSource1
+            // 
+            this.tovariBindingSource1.DataMember = "Tovari";
+            this.tovariBindingSource1.DataSource = this.mebelBDDataSet;
+            // 
+            // tovariBindingSource
+            // 
+            this.tovariBindingSource.DataMember = "Tovari";
+            this.tovariBindingSource.DataSource = this.mebelBDDataSet;
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.sotrudnikiBindingSource1, "FIO", true));
@@ -280,6 +292,16 @@
             this.comboBox2.TabIndex = 5;
             this.comboBox2.ValueMember = "FIO";
             // 
+            // sotrudnikiBindingSource1
+            // 
+            this.sotrudnikiBindingSource1.DataMember = "Sotrudniki";
+            this.sotrudnikiBindingSource1.DataSource = this.mebelBDDataSet;
+            // 
+            // sotrudnikiBindingSource
+            // 
+            this.sotrudnikiBindingSource.DataMember = "Sotrudniki";
+            this.sotrudnikiBindingSource.DataSource = this.mebelBDDataSet;
+            // 
             // comboBox3
             // 
             this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientiBindingSource2, "FIO", true));
@@ -291,6 +313,16 @@
             this.comboBox3.Size = new System.Drawing.Size(205, 21);
             this.comboBox3.TabIndex = 6;
             this.comboBox3.ValueMember = "FIO";
+            // 
+            // clientiBindingSource2
+            // 
+            this.clientiBindingSource2.DataMember = "Clienti";
+            this.clientiBindingSource2.DataSource = this.mebelBDDataSet;
+            // 
+            // clientiBindingSource1
+            // 
+            this.clientiBindingSource1.DataMember = "Clienti";
+            this.clientiBindingSource1.DataSource = this.mebelBDDataSet;
             // 
             // textBox3
             // 
@@ -369,49 +401,40 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Сумма";
             // 
-            // tovariBindingSource
-            // 
-            this.tovariBindingSource.DataMember = "Tovari";
-            this.tovariBindingSource.DataSource = this.mebelBDDataSet;
-            // 
             // tovariTableAdapter
             // 
             this.tovariTableAdapter.ClearBeforeFill = true;
-            // 
-            // tovariBindingSource1
-            // 
-            this.tovariBindingSource1.DataMember = "Tovari";
-            this.tovariBindingSource1.DataSource = this.mebelBDDataSet;
-            // 
-            // sotrudnikiBindingSource
-            // 
-            this.sotrudnikiBindingSource.DataMember = "Sotrudniki";
-            this.sotrudnikiBindingSource.DataSource = this.mebelBDDataSet;
             // 
             // sotrudnikiTableAdapter
             // 
             this.sotrudnikiTableAdapter.ClearBeforeFill = true;
             // 
-            // sotrudnikiBindingSource1
+            // button1
             // 
-            this.sotrudnikiBindingSource1.DataMember = "Sotrudniki";
-            this.sotrudnikiBindingSource1.DataSource = this.mebelBDDataSet;
+            this.button1.Location = new System.Drawing.Point(727, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // clientiBindingSource1
+            // button2
             // 
-            this.clientiBindingSource1.DataMember = "Clienti";
-            this.clientiBindingSource1.DataSource = this.mebelBDDataSet;
-            // 
-            // clientiBindingSource2
-            // 
-            this.clientiBindingSource2.DataMember = "Clienti";
-            this.clientiBindingSource2.DataSource = this.mebelBDDataSet;
+            this.button2.Location = new System.Drawing.Point(727, 89);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Удалить";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 463);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -440,12 +463,12 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodazhaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tovariBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sotrudnikiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,6 +520,8 @@
         private System.Windows.Forms.BindingSource sotrudnikiBindingSource1;
         private System.Windows.Forms.BindingSource clientiBindingSource2;
         private System.Windows.Forms.BindingSource clientiBindingSource1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
