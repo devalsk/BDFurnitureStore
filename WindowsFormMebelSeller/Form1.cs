@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace WindowsFormMebelSeller
 {
@@ -91,6 +92,34 @@ namespace WindowsFormMebelSeller
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+
+            string mTextSam = textBox4.Text;
+            string mKolvo = textBox2.Text;
+            string mAdresDelivery = textBox1.Text;
+            string mSumma = textBox3.Text;
+            string mTovar = comboBox1.Text;
+
+            OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
+            odConnect.Open();
+
+
+            OdbcCommand odbCommand = new OdbcCommand("select Tovari.NameTovar,Tovari.IdTovar,Tovari from Tovari where Tovari.NameTovar = '"+ mTovar +"'", odConnect);
+            OdbcDataReader odData = odbCommand.ExecuteReader();
+
+            int idTovar = 0;
+            string stoimostTovar = "";
+            if (odData.Read()) {
+
+
+
+                idTovar = Convert.ToInt32(odData["IdTovar"].ToString());
+                stoimostTovar = odData["Tovari.Stoimost"].ToString();
+            }
+            
+
+
 
         }
     }
