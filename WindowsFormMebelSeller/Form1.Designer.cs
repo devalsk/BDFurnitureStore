@@ -69,6 +69,8 @@
             this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.IdProdazha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -180,6 +182,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdProdazha,
             this.NameTovar,
             this.FIO1,
             this.FIO,
@@ -388,6 +391,24 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(583, 88);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // IdProdazha
+            // 
+            this.IdProdazha.DataPropertyName = "IdProdazha";
+            this.IdProdazha.HeaderText = "IdProdazha";
+            this.IdProdazha.Name = "IdProdazha";
+            this.IdProdazha.ReadOnly = true;
+            this.IdProdazha.Visible = false;
+            // 
             // NameTovar
             // 
             this.NameTovar.DataPropertyName = "NameTovar";
@@ -435,6 +456,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 463);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
@@ -520,6 +542,8 @@
         private System.Windows.Forms.BindingSource clientiBindingSource1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProdazha;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameTovar;
         private System.Windows.Forms.DataGridViewTextBoxColumn FIO1;
         private System.Windows.Forms.DataGridViewTextBoxColumn FIO;

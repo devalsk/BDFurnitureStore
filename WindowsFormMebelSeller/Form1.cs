@@ -187,31 +187,26 @@ namespace WindowsFormMebelSeller
 
 
 
-            string strProdazha = dataGridView1.CurrentCell.Value.ToString();
+            string idProdazha = dataGridView1["IdProdazha", dataGridView1.CurrentRow.Index].Value.ToString();
 
             OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
             odConnect.Open();
 
-            OdbcCommand odCom = new OdbcCommand("select Prodazha.IdProdazha, Tovari.NameTovar,Sotrudniki.FIO,Clienti.FIO,Prodazha.Kolvo,Prodazha.Samovivoz,Prodazha.AdressDostavki,Prodazha.Symma from Prodazha inner join Tovari on Tovari.IdTovar = Prodazha.Tovar inner join Sotrudniki on Sotrudniki.IdSotrudnik = Prodazha.Sotrudnik inner join Clienti on Prodazha.Client = Clienti.IdClienti where Tovari.NameTovar = 'Стул 12'",odConnect);
-            OdbcDataReader dataRead = odCom.ExecuteReader();
-
-           int idProdazha = 0;
-
-
-            if (dataRead.Read()) {
-
-                idProdazha = Convert.ToInt32(dataRead["IdProdazha"].ToString());
-
-
-            }
-            odConnect.Close();
-            //MessageBox.Show(idProdazha.ToString());
-            odConnect.Open();
-            OdbcCommand odbcCom = new OdbcCommand("delete from Prodazha where Prodazha.IdProdazha = '"+idProdazha+"'", odConnect);
+   
+        
+            OdbcCommand odbcCom = new OdbcCommand("delete from Prodazha where Prodazha.IdProdazha = '"+idProdazha+ "'", odConnect);
             odbcCom.ExecuteReader();
+            odbcCom.Dispose();
+            odConnect.Close();
 
 
             prodazhaTableAdapter.Fill(mebelBDDataSet.Prodazha);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+         
         }
     }
 }
