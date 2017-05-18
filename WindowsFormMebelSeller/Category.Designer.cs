@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kategoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
             this.kategoriTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.KategoriTableAdapter();
@@ -37,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.nameKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategoriBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
@@ -54,6 +55,12 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(618, 189);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // nameKategoriDataGridViewTextBoxColumn
+            // 
+            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
+            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "Категория";
+            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
             // 
             // kategoriBindingSource
             // 
@@ -105,17 +112,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // nameKategoriDataGridViewTextBoxColumn
+            // button3
             // 
-            this.nameKategoriDataGridViewTextBoxColumn.DataPropertyName = "NameKategori";
-            this.nameKategoriDataGridViewTextBoxColumn.HeaderText = "Категория";
-            this.nameKategoriDataGridViewTextBoxColumn.Name = "nameKategoriDataGridViewTextBoxColumn";
+            this.button3.Location = new System.Drawing.Point(274, 25);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 35);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Сохранить измениния";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 350);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -143,5 +155,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameKategoriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button3;
     }
 }

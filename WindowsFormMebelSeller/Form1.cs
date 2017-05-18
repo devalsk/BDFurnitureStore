@@ -96,9 +96,9 @@ namespace WindowsFormMebelSeller
 
 
             string mTextSam = textBox4.Text;
-            string mKolvo = textBox2.Text;
+            int mKolvo = Convert.ToInt32(textBox2.Text);
             string mAdresDelivery = textBox1.Text;
-            string mSumma = textBox3.Text;
+            int mSumma = 0;
             string mTovar = comboBox1.Text;
             string mSotrudnikiFio = comboBox2.Text;
             string mClientiFio = comboBox3.Text;
@@ -111,13 +111,13 @@ namespace WindowsFormMebelSeller
             OdbcDataReader odData = odbCommand.ExecuteReader();
 
             int idTovar = 0;
-            string stoimostTovar = "";
+            int stoimostTovar = 0;
             if (odData.Read()) {
 
 
 
                 idTovar = Convert.ToInt32(odData["IdTovar"].ToString());
-                stoimostTovar = odData["Stoimost"].ToString();
+                stoimostTovar = Convert.ToInt32(odData["Stoimost"]);
 
 
 
@@ -158,6 +158,9 @@ namespace WindowsFormMebelSeller
             odConnect.Close();
             odbDataReader.Dispose();
 
+
+            label8.Text = stoimostTovar + " Руб";
+            mSumma = mKolvo * stoimostTovar;
 
             odConnect.Open();
             OdbcCommand odbMain = new OdbcCommand("INSERT INTO Prodazha VALUES('"+ idTovar +"','" + idSotrudnik +"','"+idClienti+"','"+mTextSam+"','"+mKolvo+"','"+mAdresDelivery+"','"+mSumma+"')",odConnect);

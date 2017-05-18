@@ -170,12 +170,12 @@ namespace WindowsFormMebelSeller
         {
 
 
-            string tovarName = dataGridView1.CurrentCell.Value.ToString();
+       string idTovar = dataGridView1["IdTovar", dataGridView1.CurrentRow.Index].Value.ToString();
 
 
             OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
             odConnect.Open();
-            OdbcCommand odCommand = new OdbcCommand("delete from Tovari where Tovari.NameTovar = '" + tovarName + "'",odConnect);
+            OdbcCommand odCommand = new OdbcCommand("delete from Tovari where Tovari.IdTovar = '" + idTovar + "'",odConnect);
             OdbcDataReader odRead = odCommand.ExecuteReader();
 
             odConnect.Close();
@@ -194,6 +194,15 @@ namespace WindowsFormMebelSeller
 
 
          
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+
+
+
+
         }
     }
 }
