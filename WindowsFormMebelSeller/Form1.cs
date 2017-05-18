@@ -107,7 +107,7 @@ namespace WindowsFormMebelSeller
             odConnect.Open();
 
 
-            OdbcCommand odbCommand = new OdbcCommand("select Tovari.NameTovar,Tovari.IdTovar,Tovari from Tovari where Tovari.NameTovar = '"+ mTovar +"'", odConnect);
+            OdbcCommand odbCommand = new OdbcCommand("select Tovari.NameTovar,Tovari.IdTovar,Tovari.Stoimost from Tovari where Tovari.NameTovar = '" + mTovar +"'", odConnect);
             OdbcDataReader odData = odbCommand.ExecuteReader();
 
             int idTovar = 0;
@@ -117,7 +117,7 @@ namespace WindowsFormMebelSeller
 
 
                 idTovar = Convert.ToInt32(odData["IdTovar"].ToString());
-                stoimostTovar = odData["Tovari.Stoimost"].ToString();
+                stoimostTovar = odData["Stoimost"].ToString();
 
 
 
@@ -146,12 +146,12 @@ namespace WindowsFormMebelSeller
             OdbcCommand odbCom = new OdbcCommand("select Clienti.FIO,Clienti.IdClienti from Clienti where Clienti.FIO = '"+  mClientiFio + "'", odConnect);
             OdbcDataReader odbDataReader = odbCom.ExecuteReader();
 
-            idSotrudnik = 0;
+            int idClienti = 0;
 
             if (odbDataReader.Read()) {
 
 
-                idSotrudnik = Convert.ToInt32(odbDataReader["IdClienti"].ToString());
+                idClienti = Convert.ToInt32(odbDataReader["IdClienti"].ToString());
 
             }
 
@@ -160,8 +160,11 @@ namespace WindowsFormMebelSeller
 
 
             odConnect.Open();
-            OdbcCommand odbMain = new OdbcCommand("",odConnect);
+            OdbcCommand odbMain = new OdbcCommand("INSERT INTO Prodazha VALUES('"+ idTovar +"','" + idSotrudnik +"','"+idClienti+"','"+mTextSam+"','"+mKolvo+"','"+mAdresDelivery+"','"+mSumma+"')",odConnect);
+            OdbcDataReader odDtRead = odbMain.ExecuteReader();
+            odConnect.Close();
 
+            prodazhaTableAdapter.Fill(mebelBDDataSet.Prodazha);
 
             
 
@@ -177,6 +180,38 @@ namespace WindowsFormMebelSeller
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+
+            string strProdazha = dataGridView1.CurrentCell.Value.ToString();
+
+            OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
+            odConnect.Open();
+
+            OdbcCommand odCom = new OdbcCommand("select Prodazha.IdProdazha, Tovari.NameTovar,Sotrudniki.FIO,Clienti.FIO,Prodazha.Kolvo,Prodazha.Samovivoz,Prodazha.AdressDostavki,Prodazha.Symma from Prodazha inner join Tovari on Tovari.IdTovar = Prodazha.Tovar inner join Sotrudniki on Sotrudniki.IdSotrudnik = Prodazha.Sotrudnik inner join Clienti on Prodazha.Client = Clienti.IdClienti where Tovari.NameTovar = 'Стул 12'",odConnect);
+            OdbcDataReader dataRead = odCom.ExecuteReader();
+
+           int idProdazha = 0;
+
+
+            if (dataRead.Read()) {
+
+                idProdazha = Convert.ToInt32(dataRead["IdProdazha"].ToString());
+
+
+            }
+            odConnect.Close();
+            //MessageBox.Show(idProdazha.ToString());
+            odConnect.Open();
+            OdbcCommand odbcCom = new OdbcCommand("delete from Prodazha where Prodazha.IdProdazha = '"+idProdazha+"'", odConnect);
+            odbcCom.ExecuteReader();
+
+
+            prodazhaTableAdapter.Fill(mebelBDDataSet.Prodazha);
         }
     }
 }
