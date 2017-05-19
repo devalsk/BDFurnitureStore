@@ -55,6 +55,7 @@ namespace WindowsFormMebelSeller
 
             int ftCon = 0;
 
+            string idTovar = dataGridView1["IdTovar", dataGridView1.CurrentRow.Index].Value.ToString();
 
             string stCategory = dataGridView1.CurrentCell.Value.ToString();
 

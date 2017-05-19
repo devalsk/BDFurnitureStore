@@ -23,7 +23,7 @@ namespace WindowsFormMebelSeller
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelBDDataSet.Postavhiki". При необходимости она может быть перемещена или удалена.
             this.postavhikiTableAdapter.Fill(this.mebelBDDataSet.Postavhiki);
-
+            postavhikiTableAdapter.Update(mebelBDDataSet.Postavhiki);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -64,14 +64,14 @@ namespace WindowsFormMebelSeller
         private void button2_Click(object sender, EventArgs e)
         {
             int idCon = 0;
-
-            string stPostavhik = dataGridView1.CurrentCell.Value.ToString();
+            string idPostavhik =(dataGridView1["IdPostavhik", dataGridView1.CurrentRow.Index].Value.ToString());
+            
 
             OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
             odConnect.Open();
 
 
-            OdbcCommand odCom = new OdbcCommand("SELECT   Postavhiki.IdPostavhik, Postavhiki.NamePostavhik, Postavhiki.Telephone, Postavhiki.Email, Postavhiki.Adress FROM Postavhiki where Postavhiki.NamePostavhik = '" + stPostavhik.Replace("'", "") + "'", odConnect);
+            OdbcCommand odCom = new OdbcCommand("SELECT   Postavhiki.IdPostavhik, Postavhiki.NamePostavhik, Postavhiki.Telephone, Postavhiki.Email, Postavhiki.Adress FROM Postavhiki where Postavhiki.IdPostavhik = '" + idPostavhik.Replace("'", "") + "'", odConnect);
             OdbcDataReader odRead = odCom.ExecuteReader();
 
 
@@ -100,6 +100,11 @@ namespace WindowsFormMebelSeller
             mebelBDDataSet.Clear();
             postavhikiTableAdapter.Fill(mebelBDDataSet.Postavhiki);
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            postavhikiTableAdapter.Update(mebelBDDataSet.Postavhiki);
         }
     }
 }

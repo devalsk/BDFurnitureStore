@@ -163,27 +163,13 @@ namespace WindowsFormMebelSeller
         {
 
 
-            string mDataPostavka = dataGridView1.CurrentCell.Value.ToString();
+            string idPostavka = dataGridView1["IdPostavka", dataGridView1.CurrentRow.Index].Value.ToString();
 
             OdbcConnection odConnect = new OdbcConnection("DSN=bdr");
             odConnect.Open();
 
-            OdbcCommand odbCommand = new OdbcCommand("Select Postavka.IdPostavka,Postavka.DatePostavka from Postavka where Postavka.DatePostavka = '" + mDataPostavka + "'", odConnect);
-            OdbcDataReader odRead = odbCommand.ExecuteReader();
 
-
-            int idPostavka = 0;
-            if (odRead.Read())
-            {
-
-                idPostavka = Convert.ToInt32(odRead["IdPostavka"].ToString());
-
-
-            }
-            odRead.Dispose();
-            odConnect.Close();
-
-            odConnect.Open();
+           
             OdbcCommand odCommand = new OdbcCommand("delete from Postavka where Postavka.IdPostavka = '" + idPostavka + "'", odConnect);
             OdbcDataReader dtRead = odCommand.ExecuteReader();
             dtRead.Dispose();

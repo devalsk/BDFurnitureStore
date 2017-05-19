@@ -51,6 +51,7 @@
             this.tovariBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.postavhikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.PostavhikiTableAdapter();
             this.postavhikiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.IdPostavka = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datePostavkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamePostavhik = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +74,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdPostavka,
             this.datePostavkaDataGridViewTextBoxColumn,
             this.NameTovar,
             this.NamePostavhik,
@@ -225,6 +227,14 @@
             this.postavhikiBindingSource1.DataMember = "Postavhiki";
             this.postavhikiBindingSource1.DataSource = this.mebelBDDataSet1;
             // 
+            // IdPostavka
+            // 
+            this.IdPostavka.DataPropertyName = "IdPostavka";
+            this.IdPostavka.HeaderText = "IdPostavka";
+            this.IdPostavka.Name = "IdPostavka";
+            this.IdPostavka.ReadOnly = true;
+            this.IdPostavka.Visible = false;
+            // 
             // datePostavkaDataGridViewTextBoxColumn
             // 
             this.datePostavkaDataGridViewTextBoxColumn.DataPropertyName = "DatePostavka";
@@ -306,6 +316,7 @@
         private System.Windows.Forms.BindingSource postavhikiBindingSource;
         private MebelBDDataSetTableAdapters.PostavhikiTableAdapter postavhikiTableAdapter;
         private System.Windows.Forms.BindingSource postavhikiBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPostavka;
         private System.Windows.Forms.DataGridViewTextBoxColumn datePostavkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameTovar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamePostavhik;

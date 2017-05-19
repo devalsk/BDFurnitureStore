@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.IdPostavhik = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namePostavhikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +59,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdPostavhik,
             this.namePostavhikDataGridViewTextBoxColumn,
             this.telephoneDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
@@ -166,6 +169,24 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(408, 35);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 43);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Сохранить изменения";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // IdPostavhik
+            // 
+            this.IdPostavhik.DataPropertyName = "IdPostavhik";
+            this.IdPostavhik.HeaderText = "IdPostavhik";
+            this.IdPostavhik.Name = "IdPostavhik";
+            this.IdPostavhik.ReadOnly = true;
+            this.IdPostavhik.Visible = false;
+            // 
             // namePostavhikDataGridViewTextBoxColumn
             // 
             this.namePostavhikDataGridViewTextBoxColumn.DataPropertyName = "NamePostavhik";
@@ -195,6 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 360);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -233,6 +255,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdPostavhik;
         private System.Windows.Forms.DataGridViewTextBoxColumn namePostavhikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;

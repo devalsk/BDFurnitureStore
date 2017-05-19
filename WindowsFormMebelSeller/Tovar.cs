@@ -13,10 +13,15 @@ namespace WindowsFormMebelSeller
 {
     public partial class Tovar : Form
     {
+     
         public Tovar()
         {
             InitializeComponent();
+         
+
+
         }
+
 
         private void Tovar_Load(object sender, EventArgs e)
         {
@@ -24,6 +29,8 @@ namespace WindowsFormMebelSeller
             this.kategoriTableAdapter.Fill(this.mebelBDDataSet.Kategori);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelBDDataSet.Tovari". При необходимости она может быть перемещена или удалена.
             this.tovariTableAdapter.Fill(this.mebelBDDataSet.Tovari);
+           
+          
 
         }
 
@@ -198,10 +205,51 @@ namespace WindowsFormMebelSeller
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            string NameTovar = dataGridView1["nameTovarDataGridViewTextBoxColumn", dataGridView1.CurrentRow.Index].Value.ToString();
+            textBox1.Text = NameTovar;
+
+            string Kolvo = dataGridView1["kolvoDataGridViewTextBoxColumn", dataGridView1.CurrentRow.Index].Value.ToString();
+            textBox2.Text = Kolvo;
+
+            string Stroimost = dataGridView1["stoimostDataGridViewTextBoxColumn", dataGridView1.CurrentRow.Index].Value.ToString();
+            textBox3.Text = Stroimost;
+
+            string Opisanie = dataGridView1["opisanieDataGridViewTextBoxColumn", dataGridView1.CurrentRow.Index].Value.ToString();
+            textBox4.Text = Opisanie;
+
+            string idTovari = dataGridView1["IdTovar", dataGridView1.CurrentRow.Index].Value.ToString();
+
+            OdbcConnection odConnection = new OdbcConnection("DSN=bdr");
+            odConnection.Open();
+
+            string mComboText = comboBox1.Text;
+            OdbcCommand odComand = new OdbcCommand("select Kategori.IdKategori,Kategori.NameKategori from Kategori where Kategori.NameKategori ='" + mComboText.Replace("'", "") + "'", odConnection);
+            OdbcDataReader odRead = odComand.ExecuteReader();
+
+            int idKategory = 0;
+            if (odRead.Read())
+            {
+
+                idKategory = Convert.ToInt32(odRead["IdKategori"].ToString());
 
 
 
+
+            }
+            odConnection.Close();
+
+            odConnection.Open();
+            OdbcCommand odbCom = new OdbcCommand("UPDATE Tovari SET NameTovar = '"+ textBox1.Text + "' , Stoimost ='"+ textBox3.Text + "' , Kolvo = ' "+ textBox2.Text+ "',  Opisanie = '"+ Opisanie + "',Kategori = '"+idKategory+"' WHERE IdTovar = '" + idTovari+"'", odConnection);
+            odbCom.ExecuteReader();
+            odbCom.Dispose();
+            odConnection.Close();
+
+            tovariTableAdapter.Fill(mebelBDDataSet.Tovari);
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

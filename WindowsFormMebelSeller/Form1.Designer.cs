@@ -43,6 +43,14 @@
             this.товарыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.категорияТовараToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IdProdazha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.samovivozDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDostavkiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.symmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prodazhaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prodazhaTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.ProdazhaTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -67,15 +75,8 @@
             this.sotrudnikiTableAdapter = new WindowsFormMebelSeller.MebelBDDataSetTableAdapters.SotrudnikiTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.IdProdazha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameTovar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIO1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.samovivozDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDostavkiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.symmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientiBindingSource)).BeginInit();
@@ -193,6 +194,56 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(832, 217);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // IdProdazha
+            // 
+            this.IdProdazha.DataPropertyName = "IdProdazha";
+            this.IdProdazha.HeaderText = "IdProdazha";
+            this.IdProdazha.Name = "IdProdazha";
+            this.IdProdazha.ReadOnly = true;
+            this.IdProdazha.Visible = false;
+            // 
+            // NameTovar
+            // 
+            this.NameTovar.DataPropertyName = "NameTovar";
+            this.NameTovar.HeaderText = "Товар";
+            this.NameTovar.Name = "NameTovar";
+            // 
+            // FIO1
+            // 
+            this.FIO1.DataPropertyName = "FIO1";
+            this.FIO1.HeaderText = "Клиент";
+            this.FIO1.Name = "FIO1";
+            // 
+            // FIO
+            // 
+            this.FIO.DataPropertyName = "FIO";
+            this.FIO.HeaderText = "Сотрудник";
+            this.FIO.Name = "FIO";
+            // 
+            // samovivozDataGridViewTextBoxColumn
+            // 
+            this.samovivozDataGridViewTextBoxColumn.DataPropertyName = "Samovivoz";
+            this.samovivozDataGridViewTextBoxColumn.HeaderText = "Самовывоз";
+            this.samovivozDataGridViewTextBoxColumn.Name = "samovivozDataGridViewTextBoxColumn";
+            // 
+            // adressDostavkiDataGridViewTextBoxColumn
+            // 
+            this.adressDostavkiDataGridViewTextBoxColumn.DataPropertyName = "AdressDostavki";
+            this.adressDostavkiDataGridViewTextBoxColumn.HeaderText = "Адрес доставки";
+            this.adressDostavkiDataGridViewTextBoxColumn.Name = "adressDostavkiDataGridViewTextBoxColumn";
+            // 
+            // kolvoDataGridViewTextBoxColumn
+            // 
+            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
+            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
+            // 
+            // symmaDataGridViewTextBoxColumn
+            // 
+            this.symmaDataGridViewTextBoxColumn.DataPropertyName = "Symma";
+            this.symmaDataGridViewTextBoxColumn.HeaderText = "Сумма";
+            this.symmaDataGridViewTextBoxColumn.Name = "symmaDataGridViewTextBoxColumn";
             // 
             // prodazhaBindingSource
             // 
@@ -373,70 +424,29 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // IdProdazha
-            // 
-            this.IdProdazha.DataPropertyName = "IdProdazha";
-            this.IdProdazha.HeaderText = "IdProdazha";
-            this.IdProdazha.Name = "IdProdazha";
-            this.IdProdazha.ReadOnly = true;
-            this.IdProdazha.Visible = false;
-            // 
-            // NameTovar
-            // 
-            this.NameTovar.DataPropertyName = "NameTovar";
-            this.NameTovar.HeaderText = "Товар";
-            this.NameTovar.Name = "NameTovar";
-            // 
-            // FIO1
-            // 
-            this.FIO1.DataPropertyName = "FIO1";
-            this.FIO1.HeaderText = "Клиент";
-            this.FIO1.Name = "FIO1";
-            // 
-            // FIO
-            // 
-            this.FIO.DataPropertyName = "FIO";
-            this.FIO.HeaderText = "Сотрудник";
-            this.FIO.Name = "FIO";
-            // 
-            // samovivozDataGridViewTextBoxColumn
-            // 
-            this.samovivozDataGridViewTextBoxColumn.DataPropertyName = "Samovivoz";
-            this.samovivozDataGridViewTextBoxColumn.HeaderText = "Самовывоз";
-            this.samovivozDataGridViewTextBoxColumn.Name = "samovivozDataGridViewTextBoxColumn";
-            // 
-            // adressDostavkiDataGridViewTextBoxColumn
-            // 
-            this.adressDostavkiDataGridViewTextBoxColumn.DataPropertyName = "AdressDostavki";
-            this.adressDostavkiDataGridViewTextBoxColumn.HeaderText = "Адрес доставки";
-            this.adressDostavkiDataGridViewTextBoxColumn.Name = "adressDostavkiDataGridViewTextBoxColumn";
-            // 
-            // kolvoDataGridViewTextBoxColumn
-            // 
-            this.kolvoDataGridViewTextBoxColumn.DataPropertyName = "Kolvo";
-            this.kolvoDataGridViewTextBoxColumn.HeaderText = "Количество";
-            this.kolvoDataGridViewTextBoxColumn.Name = "kolvoDataGridViewTextBoxColumn";
-            // 
-            // symmaDataGridViewTextBoxColumn
-            // 
-            this.symmaDataGridViewTextBoxColumn.DataPropertyName = "Symma";
-            this.symmaDataGridViewTextBoxColumn.HeaderText = "Сумма";
-            this.symmaDataGridViewTextBoxColumn.Name = "symmaDataGridViewTextBoxColumn";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(315, 89);
+            this.label8.Location = new System.Drawing.Point(360, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Стоимость";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(292, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Стоимость";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 463);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -528,6 +538,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kolvoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn symmaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
 
