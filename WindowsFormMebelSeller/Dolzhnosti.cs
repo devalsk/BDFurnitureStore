@@ -73,13 +73,13 @@ namespace WindowsFormMebelSeller
 
             int ftCon = 0;
 
-            string stDolznosti = dataGridView1.CurrentCell.Value.ToString();
+            string idDolzhnosti = (dataGridView1["IdDolzhnosti", dataGridView1.CurrentRow.Index].Value.ToString());
             OdbcConnection onConect = new OdbcConnection("DSN=bdr");
             onConect.Open();
 
 
 
-            OdbcCommand idDolzh = new OdbcCommand("select Dolzhnosti.IdDolzhnosti,Dolzhnosti.NameDolzhnosti from Dolzhnosti where Dolzhnosti.NameDolzhnosti ='" + stDolznosti.Replace("'","") + "'",onConect);
+            OdbcCommand idDolzh = new OdbcCommand("select Dolzhnosti.IdDolzhnosti,Dolzhnosti.NameDolzhnosti from Dolzhnosti where Dolzhnosti.IdDolzhnosti ='" + idDolzhnosti.Replace("'","") + "'",onConect);
             OdbcDataReader dataRead = idDolzh.ExecuteReader();
 
 

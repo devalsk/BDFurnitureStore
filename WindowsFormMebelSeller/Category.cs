@@ -102,5 +102,30 @@ namespace WindowsFormMebelSeller
         {
             kategoriTableAdapter.Update(mebelBDDataSet.Kategori);
         }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                dataGridView1.CurrentCell = null;
+                dataGridView1.Rows[i].Visible = false;
+                dataGridView1.Rows[i].Visible = false;
+                for (int c = 0; c < dataGridView1.Columns.Count; c++)
+                {
+                    if (dataGridView1[c, i].Value.ToString() == textBox2.Text)
+                    {
+                        dataGridView1.Rows[i].Visible = true;
+                        break;
+
+                    }
+                    else if (textBox2.Text == "")
+                    {
+
+                        kategoriTableAdapter.Fill(mebelBDDataSet.Kategori);
+
+                    }
+                }
+            }
+        }
     }
 }

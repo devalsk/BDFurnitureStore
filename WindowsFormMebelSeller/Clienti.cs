@@ -69,12 +69,12 @@ namespace WindowsFormMebelSeller
             try
             {
                 int ftCon = 0;
-                string stClienti = dataGridView1.CurrentCell.Value.ToString();
-          
+                string idClienti = (dataGridView1["IdClienti", dataGridView1.CurrentRow.Index].Value.ToString());
+
                 OdbcConnection idCon = new OdbcConnection("DSN=bdr");
                 idCon.Open();
 
-                OdbcCommand idConf = new OdbcCommand("select Clienti.IdClienti,Clienti.FIO,Clienti.Telephone,Clienti.Email from Clienti where Clienti.FIO ='"  + stClienti.Replace("'", "") + "'",idCon);
+                OdbcCommand idConf = new OdbcCommand("select Clienti.IdClienti,Clienti.FIO,Clienti.Telephone,Clienti.Email from Clienti where Clienti.IdClienti ='" + idClienti.Replace("'", "") + "'",idCon);
                 OdbcDataReader dataRead = idConf.ExecuteReader();
 
                 string strFio = "";

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dolzhnostiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mebelBDDataSet = new WindowsFormMebelSeller.MebelBDDataSet();
@@ -40,6 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.IdDolzhnosti = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDolzhnostiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dolzhnostiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mebelBDDataSetBindingSource)).BeginInit();
@@ -51,6 +52,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdDolzhnosti,
             this.nameDolzhnostiDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dolzhnostiBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(2, 95);
@@ -58,13 +60,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(781, 206);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // nameDolzhnostiDataGridViewTextBoxColumn
-            // 
-            this.nameDolzhnostiDataGridViewTextBoxColumn.DataPropertyName = "NameDolzhnosti";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.HeaderText = "Должность";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.Name = "nameDolzhnostiDataGridViewTextBoxColumn";
-            this.nameDolzhnostiDataGridViewTextBoxColumn.Width = 500;
             // 
             // dolzhnostiBindingSource
             // 
@@ -132,6 +127,21 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // IdDolzhnosti
+            // 
+            this.IdDolzhnosti.DataPropertyName = "IdDolzhnosti";
+            this.IdDolzhnosti.HeaderText = "IdDolzhnosti";
+            this.IdDolzhnosti.Name = "IdDolzhnosti";
+            this.IdDolzhnosti.ReadOnly = true;
+            this.IdDolzhnosti.Visible = false;
+            // 
+            // nameDolzhnostiDataGridViewTextBoxColumn
+            // 
+            this.nameDolzhnostiDataGridViewTextBoxColumn.DataPropertyName = "NameDolzhnosti";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.HeaderText = "Должность";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.Name = "nameDolzhnostiDataGridViewTextBoxColumn";
+            this.nameDolzhnostiDataGridViewTextBoxColumn.Width = 500;
+            // 
             // Dolzhnosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,7 +176,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDolzhnostiDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdDolzhnosti;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDolzhnostiDataGridViewTextBoxColumn;
     }
 }
